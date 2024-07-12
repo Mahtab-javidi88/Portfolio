@@ -1,5 +1,6 @@
 ## About
-Hi, I'm Mahtab! My academic background includes a Master's degree in Artificial Intelligence and a Bachelor's degree in Computer,I am eager to leverage my expertise to contribute to innovative projects and solve complex challenges in the field of AI and Data Science.My goal is to work with dynamic teams on projects that push the boundaries of technology and create impactful solutions. Open to remote opportunities globally, I am ready to bring my skills and experience to new and exciting endeavors. 
+Hi, I'm Mahtab! I am eager to leverage my expertise to contribute to innovative projects and solve complex challenges in the field of AI and Data Science.
+welcome to my Porfolio Projects
 
 ## Technical Skills
 - **Programming Languages:** Proficient in Python, with extensive experience in TensorFlow, scikit-learn, and other machine learning libraries.
@@ -7,15 +8,27 @@ Hi, I'm Mahtab! My academic background includes a Master's degree in Artificial 
 - **Data Visualization:** Adept at creating insightful reports and dashboards using tools like Power BI and Excel.
 - **AI and Machine Learning:** Experienced in developing and fine-tuning deep learning models, including Convolutional Neural Networks (CNNs) for image processing and predictive analytics.
 
-## Certifications and Courses:
-- Completed specialized courses in Deep Learning, Neural Networks, and Machine Learning from institutions like Coursera and Deep Learning Institute.
-- Acquired certification in SQL Server Database Development and Implementation.
-
-With over 11 years of experience in software development, project management, and artificial intelligence, I have honed my skills in creating and implementing advanced AI models, particularly in the areas of deep learning and image processing. My academic background includes a Master's degree in Artificial Intelligence and a Bachelor's degree in Computer Engineering, providing a strong foundation for my technical capabilities.
+## Education and Courses:
+- **Computer Engineering BS.
+- **Artifical Enteligence MS.
+- **Machine Learning and Deep Learning courses in coursera:
+[Coursera LUE4HHU8V76S.pdf](https://github.com/user-attachments/files/16196273/Coursera.LUE4HHU8V76S.pdf)
+[Coursera GSBL3DWUFZAJ.pdf](https://github.com/user-attachments/files/16196279/Coursera.GSBL3DWUFZAJ.pdf)
+[Coursera DGGQEGX2WS5R.pdf](https://github.com/user-attachments/files/16196278/Coursera.DGGQEGX2WS5R.pdf)
+[Coursera 4CSK2WU9BN2N.pdf](https://github.com/user-attachments/files/16196277/Coursera.4CSK2WU9BN2N.pdf)
+[Coursera YQ4YKMS8S2TU.pdf](https://github.com/user-attachments/files/16196275/Coursera.YQ4YKMS8S2TU.pdf)
+[Coursera N582ST938KB6.pdf](https://github.com/user-attachments/files/16196274/Coursera.N582ST938KB6.pdf)
 
 ## Experience
-- **Project Manager and Software Developer:** Led the development and deployment of SCADA and DCS automation software projects monitoring systems across multiple sites, and designed SQL-based reports and management dashboards.
-- **Freelance AI Developer:** Successfully delivered freelance projects involving deep learning and machine learning models for various applications
+over 11 years of experience in software development, project management, and develop custemu ML and DL model case study
+I have honed my skills in creating and implementing advanced AI models, particularly in the areas of deep learning and image processing.
+My academic background includes a Master's degree in Artificial Intelligence and a Bachelor's degree in Computer Engineering, 
+providing a strong foundation for my technical capabilities
+- **Project Manager and Software Developer:**
+-  development and deployment of SCADA automation software projects for monitoring systems.
+-  designed SQL-based reports and management dashboards.
+- **Freelance AI Developer:**
+-  delivered freelance projects involving deep learning and machine learning models for various applications
 
 ## Technical Skills 
 - **Programming Languages:** Proficient in Python, with extensive experience in TensorFlow, scikit-learn, and other machine learning libraries.
@@ -23,13 +36,11 @@ With over 11 years of experience in software development, project management, an
 - **Data Visualization:** Adept at creating insightful reports and dashboards using tools like Power BI and Excel.
 - **AI and Machine Learning:** Experienced in developing and fine-tuning deep learning models, including Convolutional Neural Networks (CNNs) for image processing and predictive analytics.
 
-## Education and courses:
--Master of scince Artifical Enteligence
--Machine Learning and Deep Learning courses in coursera:
+## Portfolio Projects
 
+This Portfolio Contain 4 types of Project:
 
-
-## SQL PROJECTS
+## 1-Data Cleaning Using SQL 
                                 
 ### [MOST SUBSCRIBED YOUTUBE CHANNEL DATA ANALYSIS]
  The analysis shows the details of youtube channels which have highest number of subscribers respective of category, country, language , branded & non branded.
