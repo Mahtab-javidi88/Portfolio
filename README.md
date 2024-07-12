@@ -15,9 +15,9 @@ Hi, I'm Mahtab! welcome to my Porfolio Projects
 -**Convolutional Neural Networks**[PDF File][Coursera LUE4HHU8V76S.pdf](https://github.com/user-attachments/files/16196273/Coursera.LUE4HHU8V76S.pdf)
 -**Advanced Learning Algorithms**[PDF File][Coursera GSBL3DWUFZAJ.pdf](https://github.com/user-attachments/files/16196279/Coursera.GSBL3DWUFZAJ.pdf)
 -**Improving Deep Neural Networks**[PDF File][Coursera DGGQEGX2WS5R.pdf](https://github.com/user-attachments/files/16196278/Coursera.DGGQEGX2WS5R.pdf)
--**Neural Networks and Deep Learning**[PDF File][Coursera 4CSK2WU9BN2N.pdf](https://github.com/user-attachments/files/16196277/Coursera.4CSK2WU9BN2N.pdf)
-[Coursera YQ4YKMS8S2TU.pdf](https://github.com/user-attachments/files/16196275/Coursera.YQ4YKMS8S2TU.pdf)
-[Coursera N582ST938KB6.pdf](https://github.com/user-attachments/files/16196274/Coursera.N582ST938KB6.pdf)
+-**Neural Networks and Deep Learning**Structuring Machine Learning Projectsoursera 4CSK2WU9BN2N.pdf](https://github.com/user-attachments/files/16196277/Coursera.4CSK2WU9BN2N.pdf)
+-**Supervised Machine Learning**[PDF File][Coursera YQ4YKMS8S2TU.pdf](https://github.com/user-attachments/files/16196275/Coursera.YQ4YKMS8S2TU.pdf)
+-**Structuring Machine Learning**[PDF File][Coursera N582ST938KB6.pdf](https://github.com/user-attachments/files/16196274/Coursera.N582ST938KB6.pdf)
 
 ## Experience
 over 11 years of experience in software development, project management, and develop custemu ML and DL model case study
