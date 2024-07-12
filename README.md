@@ -40,16 +40,24 @@ providing a strong foundation for my technical capabilities
 This Portfolio Contain 4 types of Project:
 
 ## Project-1:  Exploration and Cleaning Data in SQL
-- Obtain Nashville Housing datase: Original data source is here.
+
 - Prepare dataset using Excel.
 - Import dataset into SQLServer.
-- Getting processed data back from SQLServer.
+- Used Microsoft SQl Server to clean the data
+- Converted data type to a suitable type to ensure it proper usage
+- Populated missing data from the data itself to ensure crediblity
+- Broke out columns into new individual columns for more precise results
+- Created new Columns for the new ones
+- Changed data withen a colmun to match like 'Y and N to Yes and No' so that the data matchs along each attribute
+- Found and removed duplicates so there is no bias in the data
+- Deleted unused columns to make ot more simple and fast while analyzing
+- Obtain Nashville Housing datase: Original data source is here.
 - Converting to Date format, populating NULL values, splitting data, modifying data, removing duplicates and deleting unused columns.
-- Create queries to explore dataset. Link to Queries!
 - Building our Visualizations.
 - Building our Dashboard.
 
 ## Project-2: Analyzing Correlations using Python Pandas Library
+
 - Obtain movie datset from Kaggle. Data source is from here.
 - Read data as dataframe using Python Pandas.
 - Prepare and clean data by: looking for missing data, converting data types, sorting and by dropping duplicates if necessary.
