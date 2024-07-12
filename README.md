@@ -49,7 +49,7 @@ This Portfolio Contain 4 types of Project:
 - Building our Visualizations.
 - Building our Dashboard.
 
-## Project-2: Analyzing Correlations in Movie Dataset using Python Pandas Library
+## Project-2: Analyzing Correlations using Python Pandas Library
 - Obtain movie datset from Kaggle. Data source is from here.
 - Read data as dataframe using Python Pandas.
 - Prepare and clean data by: looking for missing data, converting data types, sorting and by dropping duplicates if necessary.
