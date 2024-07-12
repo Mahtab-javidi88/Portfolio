@@ -39,17 +39,22 @@ providing a strong foundation for my technical capabilities
 
 This Portfolio Contain 4 types of Project:
 
-## 1-Data Cleaning Using SQL 
-                                
-### [MOST SUBSCRIBED YOUTUBE CHANNEL DATA ANALYSIS]
- The analysis shows the details of youtube channels which have highest number of subscribers respective of category, country, language , branded & non branded.
-   * The dataset is from Kaggle.
-   * This Dataset has details like youtube channels name, category, language, country, branded or not, number of subscribers and channel's rank. 
-   * Tools Used :- 
-        * SQL Server - Data cleaning and Exploratory data analysis [SQL File]
-        * POWER BI - To visualize the analysis output [Power BI File]        
-   * Conclusion :
+## Project-1:  Exploration and Cleaning Data in SQL
+- Obtain Nashville Housing datase: Original data source is here.
+- Prepare dataset using Excel.
+- Import dataset into SQLServer.
+- Getting processed data back from SQLServer.
+- Converting to Date format, populating NULL values, splitting data, modifying data, removing duplicates and deleting unused columns.
+- Create queries to explore dataset. Link to Queries!
+- Building our Visualizations.
+- Building our Dashboard.
 
-            
+## Project-2: Analyzing Correlations in Movie Dataset using Python Pandas Library
+- Obtain movie datset from Kaggle. Data source is from here.
+- Read data as dataframe using Python Pandas.
+- Prepare and clean data by: looking for missing data, converting data types, sorting and by dropping duplicates if necessary.
+- Formulate hypotheses on correlations between variables.
+- Analyze data by creating plots and correlation matrices using matplotlib and seaborn.
+- Link to Python script!
    
    
