@@ -19,3 +19,18 @@ Feel free to reach out to me for collaboration, networking, or discussing potent
 
 ## Table of Contents
 * [About](https://github.com/users/Mahtab-javidi88/projects/1)
+
+## SQL PROJECTS
+                                
+### [MOST SUBSCRIBED YOUTUBE CHANNEL DATA ANALYSIS]
+ The analysis shows the details of youtube channels which have highest number of subscribers respective of category, country, language , branded & non branded.
+   * The dataset is from Kaggle.
+   * This Dataset has details like youtube channels name, category, language, country, branded or not, number of subscribers and channel's rank. 
+   * Tools Used :- 
+        * SQL Server - Data cleaning and Exploratory data analysis [SQL File]
+        * POWER BI - To visualize the analysis output [Power BI File]        
+   * Conclusion :
+
+            
+   
+   
