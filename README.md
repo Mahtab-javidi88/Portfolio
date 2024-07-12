@@ -8,9 +8,9 @@ Hi, I'm Mahtab! welcome to my Porfolio Projects
 - **AI and Machine Learning:** Experienced in developing and fine-tuning deep learning models, including Convolutional Neural Networks (CNNs) for image processing and predictive analytics.
 
 ## Education and Courses:
-- ***Computer Engineering BS**
+- **Computer Engineering BS**
 - **Artifical Enteligence MS**
-- **Machine Learning and Deep Learning courses in coursera**
+- **Machine Learning and Deep Learning courses in coursera:**
 -  Convolutional Neural Networks[PDF File][Coursera LUE4HHU8V76S.pdf](https://github.com/user-attachments/files/16196273/Coursera.LUE4HHU8V76S.pdf)
 -  Advanced Learning Algorithms[PDF File][Coursera GSBL3DWUFZAJ.pdf](https://github.com/user-attachments/files/16196279/Coursera.GSBL3DWUFZAJ.pdf)
 -  Improving Deep Neural Networks[PDF File][Coursera DGGQEGX2WS5R.pdf](https://github.com/user-attachments/files/16196278/Coursera.DGGQEGX2WS5R.pdf)
