@@ -1,6 +1,5 @@
 ## About
-Hi, I'm Mahtab! I am eager to leverage my expertise to contribute to innovative projects and solve complex challenges in the field of AI and Data Science.
-welcome to my Porfolio Projects
+Hi, I'm Mahtab! welcome to my Porfolio Projects
 
 ## Technical Skills
 - **Programming Languages:** Proficient in Python, with extensive experience in TensorFlow, scikit-learn, and other machine learning libraries.
@@ -9,13 +8,14 @@ welcome to my Porfolio Projects
 - **AI and Machine Learning:** Experienced in developing and fine-tuning deep learning models, including Convolutional Neural Networks (CNNs) for image processing and predictive analytics.
 
 ## Education and Courses:
-- **Computer Engineering BS.
-- **Artifical Enteligence MS.
-- **Machine Learning and Deep Learning courses in coursera:
-[Coursera LUE4HHU8V76S.pdf](https://github.com/user-attachments/files/16196273/Coursera.LUE4HHU8V76S.pdf)
-[Coursera GSBL3DWUFZAJ.pdf](https://github.com/user-attachments/files/16196279/Coursera.GSBL3DWUFZAJ.pdf)
-[Coursera DGGQEGX2WS5R.pdf](https://github.com/user-attachments/files/16196278/Coursera.DGGQEGX2WS5R.pdf)
-[Coursera 4CSK2WU9BN2N.pdf](https://github.com/user-attachments/files/16196277/Coursera.4CSK2WU9BN2N.pdf)
+- **Computer Engineering BS**
+- **Artifical Enteligence MS**
+- **Machine Learning and Deep Learning courses in coursera**
+
+-**Convolutional Neural Networks**[PDF File][Coursera LUE4HHU8V76S.pdf](https://github.com/user-attachments/files/16196273/Coursera.LUE4HHU8V76S.pdf)
+-**Advanced Learning Algorithms**[PDF File][Coursera GSBL3DWUFZAJ.pdf](https://github.com/user-attachments/files/16196279/Coursera.GSBL3DWUFZAJ.pdf)
+-**Improving Deep Neural Networks**[PDF File][Coursera DGGQEGX2WS5R.pdf](https://github.com/user-attachments/files/16196278/Coursera.DGGQEGX2WS5R.pdf)
+-**Neural Networks and Deep Learning**[PDF File][Coursera 4CSK2WU9BN2N.pdf](https://github.com/user-attachments/files/16196277/Coursera.4CSK2WU9BN2N.pdf)
 [Coursera YQ4YKMS8S2TU.pdf](https://github.com/user-attachments/files/16196275/Coursera.YQ4YKMS8S2TU.pdf)
 [Coursera N582ST938KB6.pdf](https://github.com/user-attachments/files/16196274/Coursera.N582ST938KB6.pdf)
 
