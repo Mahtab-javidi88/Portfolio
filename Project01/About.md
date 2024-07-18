@@ -265,6 +265,7 @@ FROM hr_data
     - Remove rows with missing values if necessary.
 
 ### SQL Queries for Handling Missing Values:
+To handle missing values in the dataset and focus on performance columns, you can follow these steps. These include data cleaning, handling missing values, and analyzing key performance metrics. Here is a detailed outline:
 
 #### Identify Missing Values:
 ```sql
@@ -310,7 +311,6 @@ WHERE hire_date IS NULL;
 Focus on columns related to performance, such as tenure, age, department, and job title.
 
 ### SQL Queries for Performance Analysis:
-
 #### Calculate Average Tenure:
 ```sql
 SELECT 
@@ -592,42 +592,24 @@ FROM
 ```
 
 
-## **Data Visualization Ideas for Power BI**
-### **Findings**
-1. The age distribution shows a majority of employees are between 31-50 years old.
-2. Gender distribution indicates a slight male majority.
-3. Gender variation across departments and job titles is relatively balanced.
-4. Caucasians are the majority race in the company.
-5. The average employment length is approximately 7 years.
-6. The Auditing department has the highest turnover rate.
-7. Tenure is fairly evenly distributed across departments.
-8. About 25% of employees work remotely.
-9. Most employees are based in Ohio.
-10. Research Assistant II is the most common job title.
-11. Employee hire counts have increased over the years.
-12. Employees working remotely have a slightly higher average tenure compared to those who do not.
-13. Personal reasons are the most common reason for employee termination.
-14. Executive-level job titles have the highest average tenure, while entry-level job titles have the lowest.
-15. Older employees tend to hold higher-level job titles and are concentrated in certain departments like Management and Research.
-16. The majority of hires occurred between 2010 and 2020, with a noticeable increase in recent years.
-17. Termination rates are higher among certain racial groups and show slight gender variation.
-18. Cities with the highest employee counts also have diverse departmental representatio
-
-### **Dashboard Components**
-1. **Age Distribution Chart**: Bar chart showing age distribution in both Gregorian and Persian calendars.
-2. **Employee Satisfaction by Department**: Heat map highlighting departments with varying satisfaction levels.
-3. **Educational Qualification Distribution**: Pie chart displaying the distribution of educational qualifications.
-4. **Average Salary Over Time**: Line graph tracking average salary changes year over year.
-5. **Performance vs. Tenure Scatter Plot**: Scatter plot to show the correlation between tenure and job performance ratings.
-6. **Tenure by Department**: Bar chart comparing average tenure across different departments.
-7. **Promotion Trends**: Line chart showing the number of promotions each year.
-8. **Marital Status Distribution**: Pie chart showing the distribution of employees by marital status.
-9. **Retirement Eligibility**: Bar chart indicating the number of employees eligible for retirement in the next 5 years.
-10. **Diversity Index by State**: Map visualization showing the diversity index across different states.
-11. **Salary Distribution by Department**: Box plot visualizing the salary range within each department.
-12. **Termination Reasons**: Bar chart showing the most common reasons for employee termination.
-13. **Age at Hire by Department**: Bar chart illustrating the average age at hire for each department.
-14. **Department Transfers**: Line graph indicating the number of department transfers over the years.
-15. **Retention Rate**: Stacked bar chart showing retention rates over the last 5 years.
+### **Findings and Dashboard Components**
+1. **Age Distribution:** Majority of employees are between 31-50 years old.
+2. **Gender Breakdown:** Slight male majority.
+3. **Gender Variation:** Balanced across departments and job titles.
+4. **Race Distribution:** Majority are Caucasian.
+5. **Average Length of Employment:** Approximately 7 years.
+6. **Department Turnover Rate:** Auditing has the highest turnover rate.
+7. **Tenure Distribution:** Fairly even across departments.
+8. **Remote Work:** About 25% of employees work remotely.
+9. **State Distribution:** Most employees are based in Ohio.
+10. **Job Titles:** Research Assistant II is the most common job title.
+11. **Hire Counts Over Time:** Increased over the years.
+12. **Remote vs. Non-Remote Tenure:** Remote employees have slightly higher average tenure.
+13. **Job Title Tenure:** Executive-level job titles have the highest average tenure.
+14. **Age Correlation:** Older employees tend to hold higher-level job titles.
+15. **Hire Date Distribution:** Majority of hires occurred between 2010 and 2020.
+16. **Termination Rates:** Higher among certain racial groups with slight gender variation.
+17. **City and Department Distribution:** High employee counts in major cities with diverse departmental representation.
+18. **Average Hiring Age:** Around 30 years old.
 
 ### Summary:
