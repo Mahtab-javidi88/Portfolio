@@ -73,6 +73,24 @@ Power BI Desktop
    - Calculate and compare diversity indices across states.
    - 
 ## **Data Cleaning and Transformation Steps**
+#### Fixes zero values from the above query
+```sql
+SELECT
+    hire_yr,
+    hires,
+    terminations,
+    hires - terminations AS net_change,
+    (round(CAST(hires - terminations AS FLOAT) / NULLIF(hires, 0), 2)) *100 AS percent_hire_change
+FROM  
+    (SELECT
+        YEAR(hire_date) AS hire_yr,
+        COUNT(*) AS hires,
+        SUM(CASE WHEN new_termdate IS NOT NULL AND new_termdate <= GETDATE() THEN 1 ELSE 0 END) terminations
+    FROM hr_data
+    GROUP BY YEAR(hire_date)
+    ) AS subquery
+ORDER BY hire_yr ASC;
+```
 #### Ensure data types are consistent
 ```sql
 -- Convert hire_date and birthdate to date types if they aren't already
@@ -127,6 +145,237 @@ SELECT new_termdate FROM hr_data;
 - Convert salary and performance-related columns to appropriate data types if necessary.
 - Handle missing values in educational qualification and performance columns.
 - Create new columns for Persian dates
+
+#### Create new columns for Persian dates
+- Define a function to convert Gregorian dates to Persian dates
+```sql
+CREATE FUNCTION dbo.PersianDayOfYear (
+    @Year INT,
+    @Month INT,
+    @Day INT
+)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @DayOfYear INT;
+
+    IF @Month < 7
+        SET @DayOfYear = (@Month - 1) * 31 + @Day;
+    ELSE
+        SET @DayOfYear = 6 * 31 + (@Month - 7) * 30 + @Day;
+
+    RETURN @DayOfYear;
+END;
+GO
+```
+#### Helping Function for Calculating KABISE
+```sql
+CREATE FUNCTION dbo.IsPersianLeapYear (
+    @Year INT
+)
+RETURNS BIT
+AS
+BEGIN
+    RETURN CASE
+        WHEN ((@Year - 474) % 2820 + 474 + 38) * 682 % 2816 < 682 THEN 1
+        ELSE 0
+    END;
+END;
+GO
+```
+#### Main Function For Converting Date to Jalali
+```sql
+CREATE FUNCTION dbo.GregorianToPersian (
+    @GregorianDate DATE
+)
+RETURNS NVARCHAR(10)
+AS
+BEGIN
+    DECLARE @Gy INT, @Gm INT, @Gd INT;
+    DECLARE @Jy INT, @Jm INT, @Jd INT;
+    DECLARE @DayNo INT, @PersianNewYearDayNo INT;
+    DECLARE @PersianDate NVARCHAR(10);
+    DECLARE @LeapYear BIT;
+
+    
+    SET @Gy = YEAR(@GregorianDate);
+    SET @Gm = MONTH(@GregorianDate);
+    SET @Gd = DAY(@GregorianDate);
+
+    SET @DayNo = DATEDIFF(DAY, CONVERT(DATE, CONCAT(@Gy, '-01-01')), @GregorianDate) + 1;
+
+    SET @LeapYear = dbo.IsPersianLeapYear(@Gy - 621);
+    SET @PersianNewYearDayNo = CASE WHEN @LeapYear = 1 THEN 80 ELSE 79 END;
+
+    IF @DayNo > @PersianNewYearDayNo
+    BEGIN
+        SET @DayNo = @DayNo - @PersianNewYearDayNo;
+        SET @Jy = @Gy - 621;
+    END
+    ELSE
+    BEGIN
+        SET @DayNo = @DayNo + CASE WHEN dbo.IsPersianLeapYear(@Gy - 622) = 1 THEN 366 ELSE 365 END - @PersianNewYearDayNo;
+        SET @Jy = @Gy - 622;
+    END;
+
+  
+    IF @DayNo <= 186
+    BEGIN
+        SET @Jm = CEILING(@DayNo / 31.0);
+        SET @Jd = @DayNo - (@Jm - 1) * 31;
+    END
+    ELSE
+    BEGIN
+        SET @Jm = CEILING((@DayNo - 186) / 30.0) + 6;
+        SET @Jd = @DayNo - 186 - (@Jm - 7) * 30;
+    END;
+
+    
+    SET @PersianDate = FORMAT(@Jy, '0000') + '-' + FORMAT(@Jm, '00') + '-' + FORMAT(@Jd, '00');
+
+    RETURN @PersianDate;
+END;
+GO
+```
+
+#### Create new columns for Persian dates
+```sql
+UPDATE hr_data
+SET persian_birthdate = dbo.GregorianToPersian(birthdate)
+
+ALTER TABLE hr_data
+ADD persian_Hiredate NVARCHAR(10)
+UPDATE hr_data
+SET persian_Hiredate = dbo.GregorianToPersian(hire_date);
+
+--view age and Persian dates
+SELECT birthdate,persian_birthdate,age,hire_date,persian_Hiredate
+FROM hr_data
+```
+## Handling Missing Values and Performance Analysis
+
+### Data Cleaning Steps:
+1. **Inspect Data for Missing Values:**
+    - Identify columns with missing values.
+    - Determine the appropriate strategy to handle missing values (e.g., imputation, removal).
+
+2. **Handle Missing Values:**
+    - For numerical columns, you can fill missing values with the mean or median.
+    - For categorical columns, you can fill missing values with the mode or create a new category like "Unknown".
+    - Remove rows with missing values if necessary.
+
+### SQL Queries for Handling Missing Values:
+
+#### Identify Missing Values:
+```sql
+SELECT 
+    COUNT(*) AS total_rows,
+    SUM(CASE WHEN birthdate IS NULL THEN 1 ELSE 0 END) AS missing_birthdate,
+    SUM(CASE WHEN gender IS NULL THEN 1 ELSE 0 END) AS missing_gender,
+    SUM(CASE WHEN race IS NULL THEN 1 ELSE 0 END) AS missing_race,
+    SUM(CASE WHEN department IS NULL THEN 1 ELSE 0 END) AS missing_department,
+    SUM(CASE WHEN jobtitle IS NULL THEN 1 ELSE 0 END) AS missing_jobtitle,
+    SUM(CASE WHEN location IS NULL THEN 1 ELSE 0 END) AS missing_location,
+    SUM(CASE WHEN hire_date IS NULL THEN 1 ELSE 0 END) AS missing_hire_date,
+    SUM(CASE WHEN termdate IS NULL THEN 1 ELSE 0 END) AS missing_termdate,
+    SUM(CASE WHEN location_city IS NULL THEN 1 ELSE 0 END) AS missing_location_city,
+    SUM(CASE WHEN location_state IS NULL THEN 1 ELSE 0 END) AS missing_location_state
+FROM hr_data;
+```
+
+#### Fill Missing Values for Numerical Columns:
+```sql
+-- Example: Filling missing age with the average age
+UPDATE hr_data
+SET age = (SELECT AVG(age) FROM hr_data)
+WHERE age IS NULL;
+```
+
+#### Fill Missing Values for Categorical Columns:
+```sql
+-- Example: Filling missing gender with the mode
+UPDATE hr_data
+SET gender = (SELECT TOP 1 gender FROM hr_data GROUP BY gender ORDER BY COUNT(*) DESC)
+WHERE gender IS NULL;
+```
+
+#### Remove Rows with Missing Critical Values:
+```sql
+-- Example: Removing rows with missing hire_date
+DELETE FROM hr_data
+WHERE hire_date IS NULL;
+```
+
+### Analyzing Performance Metrics:
+Focus on columns related to performance, such as tenure, age, department, and job title.
+
+### SQL Queries for Performance Analysis:
+
+#### Calculate Average Tenure:
+```sql
+SELECT 
+    AVG(DATEDIFF(year, hire_date, ISNULL(new_termdate, GETDATE()))) AS average_tenure
+FROM 
+    hr_data;
+```
+
+#### Average Tenure by Department:
+```sql
+SELECT 
+    department,
+    AVG(DATEDIFF(year, hire_date, ISNULL(new_termdate, GETDATE()))) AS average_tenure
+FROM 
+    hr_data
+GROUP BY 
+    department;
+```
+
+#### Average Tenure by Job Title:
+```sql
+SELECT 
+    jobtitle,
+    AVG(DATEDIFF(year, hire_date, ISNULL(new_termdate, GETDATE()))) AS average_tenure
+FROM 
+    hr_data
+GROUP BY 
+    jobtitle;
+```
+
+#### Age Distribution:
+```sql
+SELECT 
+    CASE 
+        WHEN age <= 20 THEN '20 and below'
+        WHEN age BETWEEN 21 AND 30 THEN '21-30'
+        WHEN age BETWEEN 31 AND 40 THEN '31-40'
+        WHEN age BETWEEN 41 AND 50 THEN '41-50'
+        ELSE '51 and above'
+    END AS age_group,
+    COUNT(*) AS count
+FROM 
+    hr_data
+GROUP BY 
+    CASE 
+        WHEN age <= 20 THEN '20 and below'
+        WHEN age BETWEEN 21 AND 30 THEN '21-30'
+        WHEN age BETWEEN 31 AND 40 THEN '31-40'
+        WHEN age BETWEEN 41 AND 50 THEN '41-50'
+        ELSE '51 and above'
+    END;
+```
+
+#### Performance by Location:
+```sql
+SELECT 
+    location,
+    COUNT(*) AS employee_count,
+    AVG(DATEDIFF(year, hire_date, ISNULL(new_termdate, GETDATE()))) AS average_tenure
+FROM 
+    hr_data
+GROUP BY 
+    location;
+```
+
 
 ## **QUESTIONS TO ANSWER FROM THE DATA**
 
