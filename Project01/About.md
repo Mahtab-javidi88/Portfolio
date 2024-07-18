@@ -129,7 +129,7 @@ SELECT new_termdate FROM hr_data;
 
 ## **QUESTIONS TO ANSWER FROM THE DATA**
 
-#### 1) What's the age distribution in the company?
+#### 1. What's the age distribution in the company?
 ```sql
 SELECT MIN(age) AS youngest, MAX(age) AS oldest FROM hr_data;
 
@@ -149,7 +149,7 @@ GROUP BY age_group
 ORDER BY age_group;
 ```
 
-#### 2) How does employee satisfaction vary across departments?
+#### 2. How does employee satisfaction vary across departments?
 ```sql
 SELECT department, AVG(employee_satisfaction) AS avg_satisfaction
 FROM hr_data
@@ -157,7 +157,7 @@ GROUP BY department
 ORDER BY avg_satisfaction DESC;
 ```
 
-#### 3) Top 5 job titles with highest employee satisfaction
+#### 3. Top 5 job titles with highest employee satisfaction
 ```sql
 SELECT jobtitle, AVG(employee_satisfaction) AS avg_satisfaction
 FROM hr_data
@@ -166,7 +166,7 @@ ORDER BY avg_satisfaction DESC
 LIMIT 5;
 ```
 
-#### 4) Distribution of educational qualifications
+#### 4. Distribution of educational qualifications
 ```sql
 SELECT education_level, COUNT(*) AS count
 FROM hr_data
@@ -174,7 +174,7 @@ GROUP BY education_level
 ORDER BY count DESC;
 ```
 
-#### 5) Average salary change over the years
+#### 5. Average salary change over the years
 ```sql
 SELECT YEAR(hire_date) AS hire_year, AVG(salary) AS avg_salary
 FROM hr_data
@@ -182,7 +182,7 @@ GROUP BY YEAR(hire_date)
 ORDER BY hire_year;
 ```
 
-#### 6) Correlation between tenure and job performance ratings
+#### 6. Correlation between tenure and job performance ratings
 ```sql
 SELECT DATEDIFF(YEAR, hire_date, COALESCE(termdate, GETDATE())) AS tenure, AVG(job_performance) AS avg_performance
 FROM hr_data
@@ -190,7 +190,7 @@ GROUP BY DATEDIFF(YEAR, hire_date, COALESCE(termdate, GETDATE()))
 ORDER BY tenure;
 ```
 
-#### 7) Average tenure by department
+#### 7. Average tenure by department
 ```sql
 SELECT department, AVG(DATEDIFF(YEAR, hire_date, COALESCE(termdate, GETDATE()))) AS avg_tenure
 FROM hr_data
@@ -198,7 +198,7 @@ GROUP BY department
 ORDER BY avg_tenure DESC;
 ```
 
-#### 8) Number of promotions each year
+#### 8. Number of promotions each year
 ```sql
 SELECT YEAR(promotion_date) AS promotion_year, COUNT(*) AS promotions
 FROM hr_data
@@ -207,7 +207,7 @@ GROUP BY YEAR(promotion_date)
 ORDER BY promotion_year;
 ```
 
-#### 9) Distribution by marital status
+#### 9. Distribution by marital status
 ```sql
 SELECT marital_status, COUNT(*) AS count
 FROM hr_data
@@ -215,14 +215,14 @@ GROUP BY marital_status
 ORDER BY count DESC;
 ```
 
-#### 10) Employees eligible for retirement in the next 5 years
+#### 10. Employees eligible for retirement in the next 5 years
 ```sql
 SELECT COUNT(*) AS eligible_for_retirement
 FROM hr_data
 WHERE DATEDIFF(YEAR, birthdate, GETDATE()) >= 55;
 ```
 
-#### 11) Diversity index by state
+#### 11. Diversity index by state
 ```sql
 SELECT location_state, 
        1.0 / SUM(CAST(COUNT(race) AS FLOAT) / (SELECT COUNT(*) FROM hr_data WHERE new_termdate IS NULL)) AS diversity_index
@@ -231,98 +231,108 @@ WHERE new_termdate IS NULL
 GROUP BY location_state
 ORDER BY diversity_index DESC;
 ```
-#### 12) What's the distribution of educational qualifications among employees?
+#### 12. What is the average tenure of employees who work remotely compared to those who do not?
 ```sql
-SELECT
-  education_level,
-  COUNT(*) AS count
-FROM
-  hr_data
-WHERE
-  new_termdate IS NULL
-GROUP BY
-  education_level
-ORDER BY
-  count DESC;
+SELECT 
+    location,
+    AVG(DATEDIFF(year, hire_date, new_termdate)) AS average_tenure
+FROM 
+    hr_data
+WHERE 
+    new_termdate IS NOT NULL AND new_termdate <= GETDATE()
+GROUP BY 
+    location;
 ```
 
-#### 13) How does the average salary differ across departments and job titles?
+#### 13. What are the most common reasons for employee termination?
 ```sql
 SELECT
-  department,
-  jobtitle,
-  AVG(salary) AS average_salary
+    termination_reason,
+    COUNT(*) AS count
 FROM
-  hr_data
+    hr_data
 WHERE
-  new_termdate IS NULL
+    new_termdate IS NOT NULL
 GROUP BY
-  department, jobtitle
+    termination_reason
 ORDER BY
-  average_salary DESC;
+    count DESC;
 ```
 
-#### 14) What is the correlation between employee age and job level?
+#### 14. Which job titles have the highest and lowest average tenure?
 ```sql
 SELECT
-  age,
-  job_level,
-  COUNT(*) AS count
+    jobtitle,
+    AVG(DATEDIFF(year, hire_date, new_termdate)) AS average_tenure
 FROM
-  hr_data
+    hr_data
 WHERE
-  new_termdate IS NULL
+    new_termdate IS NOT NULL
 GROUP BY
-  age, job_level
+    jobtitle
 ORDER BY
-  age, job_level;
+    average_tenure DESC;
 ```
 
-#### 15) Which departments have the highest promotion rates?
+#### 15. How does the age of employees correlate with their job title and department?
 ```sql
 SELECT
-  department,
-  COUNT(*) AS promotion_count
+    department,
+    jobtitle,
+    AVG(age) AS average_age
 FROM
-  hr_data
+    hr_data
 WHERE
-  promoted = 1
+    new_termdate IS NULL
 GROUP BY
-  department
+    department, jobtitle
 ORDER BY
-  promotion_count DESC;
+    department, jobtitle;
 ```
 
-#### 16) How does employee performance vary by department and job title?
+#### 16. What is the distribution of employees' hire dates over the 20-year period?
 ```sql
 SELECT
-  department,
-  jobtitle,
-  AVG(performance_score) AS average_performance
+    YEAR(hire_date) AS hire_year,
+    COUNT(*) AS count
 FROM
-  hr_data
-WHERE
-  new_termdate IS NULL
+    hr_data
 GROUP BY
-  department, jobtitle
+    YEAR(hire_date)
 ORDER BY
-  average_performance DESC;
+    hire_year;
 ```
 
-#### 17) What are the reasons for termination and their distribution across departments?
+#### 17. How do termination rates vary by race and gender?
 ```sql
 SELECT
-  department,
-  termination_reason,
-  COUNT(*) AS count
+    race,
+    gender,
+    COUNT(*) AS termination_count
 FROM
-  hr_data
+    hr_data
 WHERE
-  new_termdate IS NOT NULL
+    new_termdate IS NOT NULL
 GROUP BY
-  department, termination_reason
+    race, gender
 ORDER BY
-  count DESC;
+    termination_count DESC;
+```
+
+#### 18. What is the distribution of employees by city and department?
+```sql
+SELECT
+    location_city,
+    department,
+    COUNT(*) AS count
+FROM
+    hr_data
+WHERE
+    new_termdate IS NULL
+GROUP BY
+    location_city, department
+ORDER BY
+    count DESC;
 ```
 
 ## **Data Visualization Ideas for Power BI**
