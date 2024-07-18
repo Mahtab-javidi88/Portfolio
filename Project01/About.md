@@ -70,7 +70,7 @@ Power BI Desktop
    - Identify employees eligible for retirement soon.
 10. **Diversity Analysis**:
    - Calculate and compare diversity indices across states.
-
+####
 ## **Data Cleaning and Transformation Steps**
 #### Ensure data types are consistent
 ```sql
