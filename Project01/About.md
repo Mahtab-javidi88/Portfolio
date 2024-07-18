@@ -14,25 +14,41 @@ The dataset includes HR records of 22,000 employees from 2000 to 2020.
 ## Data Visualization:
 Power BI Desktop
 
-## Exploratory Data Analysis
-### Questions:
+###  Analytical Queries:
 
-1. **What's the age distribution in the company in both Gregorian and Persian calendars?**
-2. **What's the gender breakdown in the company?**
-3. **How does gender vary across departments and job titles?**
-4. **What's the race distribution in the company?**
-5. **What's the average length of employment in the company?**
-6. **Which department has the highest turnover rate?**
-7. **What is the tenure distribution for each department?**
-8. **How many employees work remotely for each department?**
-9. **What's the distribution of employees across different states?**
-10. **How are job titles distributed in the company?**
-11. **How have employee hire counts varied over time?**
-12. **What's the salary distribution by department?**
-13. **What are the most common reasons for employee termination?**
-14. **How does the average age at hire vary by department?**
-15. **How many employees have transferred departments?**
-16. **What is the retention rate over the last 5 years?**
+## Source Data:
+The dataset includes HR records of 22,000 employees from 2000 to 2020.
+
+## Data Cleaning & Analysis:
+
+- Data loading & inspection
+- Handling missing values
+- Data cleaning and transformation
+
+## Data Visualization:
+Power BI Desktop
+
+## Exploratory Data Analysis
+
+### Questions:
+1. **What's the age distribution in the company?**
+2. What's the gender breakdown in the company?
+3. How does gender vary across departments and job titles?
+4. What's the race distribution in the company?
+5. What's the average length of employment in the company?
+6. Which department has the highest turnover rate?
+7. What is the tenure distribution for each department?
+8. How many employees work remotely for each department?
+9. What's the distribution of employees across different states?
+10. How are job titles distributed in the company?
+11. How have employee hire counts varied over time?
+12. **What's the distribution of educational qualifications among employees?**
+13. **How does the average salary differ across departments and job titles?**
+14. **What is the correlation between employee age and job level?**
+15. **Which departments have the highest promotion rates?**
+16. **How does employee performance (if data available) vary by department and job title?**
+17. **What are the reasons for termination and their distribution across departments?**
+
 
 ### Insights:
 1. **Age Distribution**:
@@ -58,24 +74,9 @@ Power BI Desktop
 10. **Diversity Analysis**:
    - Calculate and compare diversity indices across states.
 
-### Implementation Steps:
 
-### 1) Create Database
-```sql
-CREATE DATABASE hr;
-```
 
-### 2) Import Data to SQL Server
-- Right-click on Human_Resources > Tasks > Import Data
-- Use import wizard to import HR Data.csv to hr table.
-- Verify that the import worked:
-
-```sql
-USE hr;
-SELECT * FROM hr_data;
-```
-
-### 3)  Data Cleaning and Transformation Steps
+###Data Cleaning and Transformation Steps
 
 #### Ensure data types are consistent
 ```sql
@@ -112,7 +113,7 @@ END);
 
 #### Update date/time to date format
 - Convert dates to yyyy-MM-dd
-- Create new columns for Persian dates
+- Create new columns for age
 
 ```sql
 UPDATE hr_data
@@ -129,31 +130,11 @@ END;
 SELECT new_termdate FROM hr_data;
 ```
 
-#### Create new columns for age and Persian dates
-```sql
-ALTER TABLE hr_data
-ADD age INT, persian_birthdate NVARCHAR(10), persian_termdate NVARCHAR(10);
 
-UPDATE hr_data
-SET age = DATEDIFF(YEAR, birthdate, GETDATE());
-```
-
-#### Define a function to convert Gregorian dates to Persian dates
-```sql
-CREATE FUNCTION dbo.GregorianToPersian (@gregorianDate DATE)
-RETURNS NVARCHAR(10)
-AS
-BEGIN
-    DECLARE @persianDate NVARCHAR(10);
-    -- Placeholder conversion logic; replace with actual conversion logic
-    SET @persianDate = CONVERT(NVARCHAR(10), @gregorianDate, 111);
-    RETURN @persianDate;
-END;
-
-UPDATE hr_data
-SET persian_birthdate = dbo.GregorianToPersian(birthdate),
-    persian_termdate = dbo.GregorianToPersian(termdate);
-```
+### Additional Data Cleaning Steps:
+- Convert salary and performance-related columns to appropriate data types if necessary.
+- Handle missing values in educational qualification and performance columns.
+- Create new columns for Persian dates
 
 ### QUESTIONS TO ANSWER FROM THE DATA
 
@@ -259,56 +240,118 @@ WHERE new_termdate IS NULL
 GROUP BY location_state
 ORDER BY diversity_index DESC;
 ```
-### Additional Exploratory Data Analysis (EDA)
-
-#### 12) What's the salary distribution by department?
+#### 12. What's the distribution of educational qualifications among employees?
 ```sql
-SELECT department, 
-       PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY salary) AS Q1,
-       PERCENTILE_CONT(0.50) WITHIN GROUP (ORDER BY salary) AS median,
-       PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY salary) AS Q3
-FROM hr_data
-GROUP BY department
-ORDER BY department;
+SELECT
+  education_level,
+  COUNT(*) AS count
+FROM
+  hr_data
+WHERE
+  new_termdate IS NULL
+GROUP BY
+  education_level
+ORDER BY
+  count DESC;
 ```
 
-#### 13) What are the most common reasons for employee termination?
+#### 13. How does the average salary differ across departments and job titles?
 ```sql
-SELECT termination_reason, COUNT(*) AS count
-FROM hr_data
-WHERE new_termdate IS NOT NULL
-GROUP BY termination_reason
-ORDER BY count DESC;
+SELECT
+  department,
+  jobtitle,
+  AVG(salary) AS average_salary
+FROM
+  hr_data
+WHERE
+  new_termdate IS NULL
+GROUP BY
+  department, jobtitle
+ORDER BY
+  average_salary DESC;
 ```
 
-#### 14) How does the average age at hire vary by department?
+#### 14. What is the correlation between employee age and job level?
 ```sql
-SELECT department, AVG(DATEDIFF(YEAR, birthdate, hire_date)) AS avg_age_at_hire
-FROM hr_data
-GROUP BY department
-ORDER BY avg_age_at_hire;
+SELECT
+  age,
+  job_level,
+  COUNT(*) AS count
+FROM
+  hr_data
+WHERE
+  new_termdate IS NULL
+GROUP BY
+  age, job_level
+ORDER BY
+  age, job_level;
 ```
 
-#### 15) How many employees have transferred departments?
+#### 15. Which departments have the highest promotion rates?
 ```sql
-SELECT COUNT(DISTINCT employee_id) AS transfer_count
-FROM hr_data
-WHERE department_transfer_date IS NOT NULL;
+SELECT
+  department,
+  COUNT(*) AS promotion_count
+FROM
+  hr_data
+WHERE
+  promoted = 1
+GROUP BY
+  department
+ORDER BY
+  promotion_count DESC;
 ```
 
-#### 16) What is the retention rate over the last 5 years?
+#### 16. How does employee performance vary by department and job title?
 ```sql
-SELECT hire_year, 
-       COUNT(*) AS hires, 
-       SUM(CASE WHEN new_termdate IS NULL THEN 1 ELSE 0 END) AS retained
-FROM (
-    SELECT YEAR(hire_date) AS hire_year, new_termdate
-    FROM hr_data
-) AS subquery
-WHERE hire_year >= YEAR(GETDATE()) - 5
-GROUP BY hire_year
-ORDER BY hire_year;
+SELECT
+  department,
+  jobtitle,
+  AVG(performance_score) AS average_performance
+FROM
+  hr_data
+WHERE
+  new_termdate IS NULL
+GROUP BY
+  department, jobtitle
+ORDER BY
+  average_performance DESC;
 ```
+
+#### 17. What are the reasons for termination and their distribution across departments?
+```sql
+SELECT
+  department,
+  termination_reason,
+  COUNT(*) AS count
+FROM
+  hr_data
+WHERE
+  new_termdate IS NOT NULL
+GROUP BY
+  department, termination_reason
+ORDER BY
+  count DESC;
+```
+
+### Findings:
+1. The age distribution shows a majority of employees are between 31-50 years old.
+2. Gender distribution indicates a slight male majority.
+3. Gender variation across departments and job titles is relatively balanced.
+4. Caucasians are the majority race in the company.
+5. The average employment length is approximately 7 years.
+6. The Auditing department has the highest turnover rate.
+7. Tenure is fairly evenly distributed across departments.
+8. About 25% of employees work remotely.
+9. Most employees are based in Ohio.
+10. Research Assistant II is the most common job title.
+11. Employee hire counts have increased over the years.
+12. Educational qualifications are varied, with a majority holding bachelor's degrees.
+13. Average salaries vary significantly, with the highest in executive-level positions.
+14. There is a positive correlation between age and job level.
+15. The Marketing department has the highest promotion rates.
+16. Performance scores are highest in the R&D department.
+17. Termination reasons vary, with personal reasons being the most common across departments.
 
 ### Data Visualization Ideas for Power BI
 
