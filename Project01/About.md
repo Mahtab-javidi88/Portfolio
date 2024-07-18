@@ -40,12 +40,13 @@ Power BI Desktop
 9. **What's the distribution of employees across different states?**
 10. **How are job titles distributed in the company?**
 11. **How have employee hire counts varied over time?**
-12. **What's the distribution of educational qualifications among employees?**
-13. **How does the average salary differ across departments and job titles?**
-14. **What is the correlation between employee age and job level?**
-15. **Which departments have the highest promotion rates?**
-16. **How does employee performance (if data available) vary by department and job title?**
-17. **What are the reasons for termination and their distribution across departments?**
+12. **What is the average tenure of employees who work remotely compared to those who do not?**
+13. **What are the most common reasons for employee termination?**
+14. **Which job titles have the highest and lowest average tenure?**
+15. **How does the age of employees correlate with their job title and department?**
+16. **What is the distribution of employees' hire dates over the 20-year period?**
+17. **How do termination rates vary by race and gender?**
+18. **What is the distribution of employees by city and department?**
 
 ## Insights:
 1. **Age Distribution**:
@@ -70,6 +71,7 @@ Power BI Desktop
    - Identify employees eligible for retirement soon.
 10. **Diversity Analysis**:
    - Calculate and compare diversity indices across states.
+   - 
 ## **Data Cleaning and Transformation Steps**
 #### Ensure data types are consistent
 ```sql
@@ -336,12 +338,13 @@ ORDER BY
 9. Most employees are based in Ohio.
 10. Research Assistant II is the most common job title.
 11. Employee hire counts have increased over the years.
-12. Educational qualifications are varied, with a majority holding bachelor's degrees.
-13. Average salaries vary significantly, with the highest in executive-level positions.
-14. There is a positive correlation between age and job level.
-15. The Marketing department has the highest promotion rates.
-16. Performance scores are highest in the R&D department.
-17. Termination reasons vary, with personal reasons being the most common across departments.
+12. Employees working remotely have a slightly higher average tenure compared to those who do not.
+13. Personal reasons are the most common reason for employee termination.
+14. Executive-level job titles have the highest average tenure, while entry-level job titles have the lowest.
+15. Older employees tend to hold higher-level job titles and are concentrated in certain departments like Management and Research.
+16. The majority of hires occurred between 2010 and 2020, with a noticeable increase in recent years.
+17. Termination rates are higher among certain racial groups and show slight gender variation.
+18. Cities with the highest employee counts also have diverse departmental representatio
 
 ### **Dashboard Components**
 1. **Age Distribution Chart**: Bar chart showing age distribution in both Gregorian and Persian calendars.
