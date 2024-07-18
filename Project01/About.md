@@ -20,19 +20,19 @@ Power BI Desktop
 1. **What's the age distribution in the company in both Gregorian and Persian calendars?**
 2. **What's the gender breakdown in the company?**
 3. **How does gender vary across departments and job titles?**
-4. **What's the race distribution in the company?
-5. **What's the average length of employment in the company?
-6. **Which department has the highest turnover rate?
-7. **What is the tenure distribution for each department?
-8. **How many employees work remotely for each department?
-9. **What's the distribution of employees across different states?
-10. **How are job titles distributed in the company?
-11. **How have employee hire counts varied over time?
-12. **What's the salary distribution by department?
-13. **What are the most common reasons for employee termination?
-14. **How does the average age at hire vary by department?
-15. **How many employees have transferred departments?
-16. **What is the retention rate over the last 5 years?
+4. **What's the race distribution in the company?**
+5. **What's the average length of employment in the company?**
+6. **Which department has the highest turnover rate?**
+7. **What is the tenure distribution for each department?**
+8. **How many employees work remotely for each department?**
+9. **What's the distribution of employees across different states?**
+10. **How are job titles distributed in the company?**
+11. **How have employee hire counts varied over time?**
+12. **What's the salary distribution by department?**
+13. **What are the most common reasons for employee termination?**
+14. **How does the average age at hire vary by department?**
+15. **How many employees have transferred departments?**
+16. **What is the retention rate over the last 5 years?**
 
 ### Insights:
 1. **Age Distribution**:
