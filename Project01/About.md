@@ -17,9 +17,9 @@ Power BI Desktop
 ## Exploratory Data Analysis
 ### Questions:
 
-1.**What's the age distribution in the company in both Gregorian and Persian calendars?**
-2.**What's the gender breakdown in the company?
-3. **How does gender vary across departments and job titles?
+1. **What's the age distribution in the company in both Gregorian and Persian calendars?**
+2. **What's the gender breakdown in the company?**
+3. **How does gender vary across departments and job titles?**
 4. **What's the race distribution in the company?
 5. **What's the average length of employment in the company?
 6. **Which department has the highest turnover rate?
