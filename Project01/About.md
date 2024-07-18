@@ -91,13 +91,14 @@ ADD tenure INT,
 ```
 
 #### Populate the new columns
+- Calculate tenure
 ```sql
--- Calculate tenure
 UPDATE hr_data
 SET tenure = DATEDIFF(YEAR, hire_date, COALESCE(new_termdate, GETDATE()));
 
--- Example: Assume job performance ratings are calculated based on some criteria
--- This is just a placeholder; replace with actual logic
+- Example: Assume job performance ratings are calculated based on some criteria
+- This is just a placeholder; replace with actual logic
+```sql
 UPDATE hr_data
 SET job_performance_rating = (CASE
     WHEN job_performance IS NOT NULL THEN job_performance * 1.0
