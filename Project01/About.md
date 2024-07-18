@@ -1,4 +1,5 @@
-### HR DATA ANALYSIS - SQL SERVER / POWER BI
+## **Human Resource DATA ANALYSIS** ##
+### SQL SERVER / POWER BI ###
 
 This project explores human resource data analysis using SQL and Power BI, aimed at revealing key insights to aid company decisions.
 
@@ -14,8 +15,6 @@ The dataset includes HR records of 22,000 employees from 2000 to 2020.
 ## Data Visualization:
 Power BI Desktop
 
-###  Analytical Queries:
-
 ## Source Data:
 The dataset includes HR records of 22,000 employees from 2000 to 2020.
 
@@ -29,19 +28,18 @@ The dataset includes HR records of 22,000 employees from 2000 to 2020.
 Power BI Desktop
 
 ## Exploratory Data Analysis
-
-### Questions:
+## Questions:
 1. **What's the age distribution in the company?**
-2. What's the gender breakdown in the company?
-3. How does gender vary across departments and job titles?
-4. What's the race distribution in the company?
-5. What's the average length of employment in the company?
-6. Which department has the highest turnover rate?
-7. What is the tenure distribution for each department?
-8. How many employees work remotely for each department?
-9. What's the distribution of employees across different states?
-10. How are job titles distributed in the company?
-11. How have employee hire counts varied over time?
+2. **What's the gender breakdown in the company?**
+3. **How does gender vary across departments and job titles?**
+4. **What's the race distribution in the company?**
+5. **What's the average length of employment in the company?**
+6. **Which department has the highest turnover rate?**
+7. **What is the tenure distribution for each department?**
+8. **How many employees work remotely for each department?**
+9. **What's the distribution of employees across different states?**
+10. **How are job titles distributed in the company?**
+11. **How have employee hire counts varied over time?**
 12. **What's the distribution of educational qualifications among employees?**
 13. **How does the average salary differ across departments and job titles?**
 14. **What is the correlation between employee age and job level?**
@@ -49,8 +47,7 @@ Power BI Desktop
 16. **How does employee performance (if data available) vary by department and job title?**
 17. **What are the reasons for termination and their distribution across departments?**
 
-
-### Insights:
+## Insights:
 1. **Age Distribution**:
    - Convert birthdate and termdate to the Persian calendar.
    - Analyze age distribution in both Gregorian and Persian calendars.
@@ -74,10 +71,7 @@ Power BI Desktop
 10. **Diversity Analysis**:
    - Calculate and compare diversity indices across states.
 
-
-
-###Data Cleaning and Transformation Steps
-
+## **Data Cleaning and Transformation Steps**
 #### Ensure data types are consistent
 ```sql
 -- Convert hire_date and birthdate to date types if they aren't already
@@ -87,7 +81,6 @@ ALTER COLUMN hire_date DATE;
 ALTER TABLE hr_data
 ALTER COLUMN birthdate DATE;
 ```
-
 #### Add columns for additional analysis
 ```sql
 -- Add columns for calculating tenure and job performance ratings
@@ -110,7 +103,6 @@ SET job_performance_rating = (CASE
     ELSE 0.0
 END);
 ```
-
 #### Update date/time to date format
 - Convert dates to yyyy-MM-dd
 - Create new columns for age
@@ -129,14 +121,12 @@ END;
 
 SELECT new_termdate FROM hr_data;
 ```
-
-
-### Additional Data Cleaning Steps:
+#### Additional Data Cleaning Steps:
 - Convert salary and performance-related columns to appropriate data types if necessary.
 - Handle missing values in educational qualification and performance columns.
 - Create new columns for Persian dates
 
-### QUESTIONS TO ANSWER FROM THE DATA
+## **QUESTIONS TO ANSWER FROM THE DATA**
 
 #### 1) What's the age distribution in the company?
 ```sql
@@ -240,7 +230,7 @@ WHERE new_termdate IS NULL
 GROUP BY location_state
 ORDER BY diversity_index DESC;
 ```
-#### 12. What's the distribution of educational qualifications among employees?
+#### 12) What's the distribution of educational qualifications among employees?
 ```sql
 SELECT
   education_level,
@@ -255,7 +245,7 @@ ORDER BY
   count DESC;
 ```
 
-#### 13. How does the average salary differ across departments and job titles?
+#### 13) How does the average salary differ across departments and job titles?
 ```sql
 SELECT
   department,
@@ -271,7 +261,7 @@ ORDER BY
   average_salary DESC;
 ```
 
-#### 14. What is the correlation between employee age and job level?
+#### 14) What is the correlation between employee age and job level?
 ```sql
 SELECT
   age,
@@ -287,7 +277,7 @@ ORDER BY
   age, job_level;
 ```
 
-#### 15. Which departments have the highest promotion rates?
+#### 15) Which departments have the highest promotion rates?
 ```sql
 SELECT
   department,
@@ -302,7 +292,7 @@ ORDER BY
   promotion_count DESC;
 ```
 
-#### 16. How does employee performance vary by department and job title?
+#### 16) How does employee performance vary by department and job title?
 ```sql
 SELECT
   department,
@@ -318,7 +308,7 @@ ORDER BY
   average_performance DESC;
 ```
 
-#### 17. What are the reasons for termination and their distribution across departments?
+#### 17) What are the reasons for termination and their distribution across departments?
 ```sql
 SELECT
   department,
@@ -334,7 +324,9 @@ ORDER BY
   count DESC;
 ```
 
-### Findings:
+## **Data Visualization Ideas for Power BI**
+
+### **Findings**
 1. The age distribution shows a majority of employees are between 31-50 years old.
 2. Gender distribution indicates a slight male majority.
 3. Gender variation across departments and job titles is relatively balanced.
@@ -353,9 +345,7 @@ ORDER BY
 16. Performance scores are highest in the R&D department.
 17. Termination reasons vary, with personal reasons being the most common across departments.
 
-### Data Visualization Ideas for Power BI
-
-#### Dashboard Components:
+### **Dashboard Components**
 1. **Age Distribution Chart**: Bar chart showing age distribution in both Gregorian and Persian calendars.
 2. **Employee Satisfaction by Department**: Heat map highlighting departments with varying satisfaction levels.
 3. **Educational Qualification Distribution**: Pie chart displaying the distribution of educational qualifications.
@@ -373,4 +363,3 @@ ORDER BY
 15. **Retention Rate**: Stacked bar chart showing retention rates over the last 5 years.
 
 ### Summary:
-By following these steps, you can enhance your HR data analysis project with new questions and insights, ensuring that it stands out in your portfolio. The added analysis and visualizations provide a more comprehensive understanding of the HR data, showcasing your skills in SQL and Power BI effectively.
