@@ -41,12 +41,12 @@ Power BI Desktop
 10. **How are job titles distributed in the company?**
 11. **How have employee hire counts varied over time?**
 12. **What is the average tenure of employees who work remotely compared to those who do not?**
-13. **What are the most common reasons for employee termination?**
-14. **Which job titles have the highest and lowest average tenure?**
-15. **How does the age of employees correlate with their job title and department?**
-16. **What is the distribution of employees' hire dates over the 20-year period?**
-17. **How do termination rates vary by race and gender?**
-18. **What is the distribution of employees by city and department?**
+13. **Which job titles have the highest and lowest average tenure?**
+14. **How does the age of employees correlate with their job title and department?**
+15. **What is the distribution of employees' hire dates over the 20-year period?**
+16. **How do termination rates vary by race and gender?**
+17. **What is the distribution of employees by city and department?**
+18. **What is the average age of employees at the time of hiring?**
 
 ## Insights:
 1. **Age Distribution**:
@@ -244,22 +244,20 @@ GROUP BY
     location;
 ```
 
-#### 13. What are the most common reasons for employee termination?
+#### 12. What is the average tenure of employees who work remotely compared to those who do not?
 ```sql
-SELECT
-    termination_reason,
-    COUNT(*) AS count
-FROM
+SELECT 
+    location,
+    AVG(DATEDIFF(year, hire_date, new_termdate)) AS average_tenure
+FROM 
     hr_data
-WHERE
-    new_termdate IS NOT NULL
-GROUP BY
-    termination_reason
-ORDER BY
-    count DESC;
+WHERE 
+    new_termdate IS NOT NULL AND new_termdate <= GETDATE()
+GROUP BY 
+    location;
 ```
 
-#### 14. Which job titles have the highest and lowest average tenure?
+#### 13. Which job titles have the highest and lowest average tenure?
 ```sql
 SELECT
     jobtitle,
@@ -274,7 +272,7 @@ ORDER BY
     average_tenure DESC;
 ```
 
-#### 15. How does the age of employees correlate with their job title and department?
+#### 14. How does the age of employees correlate with their job title and department?
 ```sql
 SELECT
     department,
@@ -290,7 +288,7 @@ ORDER BY
     department, jobtitle;
 ```
 
-#### 16. What is the distribution of employees' hire dates over the 20-year period?
+#### 15. What is the distribution of employees' hire dates over the 20-year period?
 ```sql
 SELECT
     YEAR(hire_date) AS hire_year,
@@ -303,7 +301,7 @@ ORDER BY
     hire_year;
 ```
 
-#### 17. How do termination rates vary by race and gender?
+#### 16. How do termination rates vary by race and gender?
 ```sql
 SELECT
     race,
@@ -319,7 +317,7 @@ ORDER BY
     termination_count DESC;
 ```
 
-#### 18. What is the distribution of employees by city and department?
+#### 17. What is the distribution of employees by city and department?
 ```sql
 SELECT
     location_city,
@@ -334,6 +332,15 @@ GROUP BY
 ORDER BY
     count DESC;
 ```
+
+#### 18. What is the average age of employees at the time of hiring?
+```sql
+SELECT 
+    AVG(DATEDIFF(year, birthdate, hire_date)) AS average_hire_age
+FROM 
+    hr_data;
+```
+
 
 ## **Data Visualization Ideas for Power BI**
 ### **Findings**
