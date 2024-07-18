@@ -70,7 +70,6 @@ Power BI Desktop
    - Identify employees eligible for retirement soon.
 10. **Diversity Analysis**:
    - Calculate and compare diversity indices across states.
-####
 ## **Data Cleaning and Transformation Steps**
 #### Ensure data types are consistent
 ```sql
@@ -325,7 +324,6 @@ ORDER BY
 ```
 
 ## **Data Visualization Ideas for Power BI**
-
 ### **Findings**
 1. The age distribution shows a majority of employees are between 31-50 years old.
 2. Gender distribution indicates a slight male majority.
