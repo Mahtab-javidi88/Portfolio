@@ -481,18 +481,6 @@ WHERE new_termdate IS NULL
 GROUP BY location_state
 ORDER BY diversity_index DESC;
 ```
-#### 12. What is the average tenure of employees who work remotely compared to those who do not?
-```sql
-SELECT 
-    location,
-    AVG(DATEDIFF(year, hire_date, new_termdate)) AS average_tenure
-FROM 
-    hr_data
-WHERE 
-    new_termdate IS NOT NULL AND new_termdate <= GETDATE()
-GROUP BY 
-    location;
-```
 
 #### 12. What is the average tenure of employees who work remotely compared to those who do not?
 ```sql
