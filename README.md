@@ -18,7 +18,7 @@ Feel free to explore my repositories and connect with me via [LinkedIn](https://
 ### **1. Customer Churn Prediction**  
 A machine learning model to predict customer churn based on historical customer data.  
 - **Key Skills**: Python, Scikit-learn, Pandas, Data Preprocessing, Model Evaluation  
-- [Explore the Repository](https://github.com/yourusername/customer-churn-prediction)
+- [Explore the Repository](https://github.com/Mahtab-javidi88/Portfolio/customer-churn-prediction)
 
 ### **2. Sales Data Analysis with SQL**  
 Analyzing sales trends, KPIs, and revenue growth using advanced SQL queries.  
