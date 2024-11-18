@@ -28,7 +28,7 @@ The goal of this project is to predict whether a customer will leave (churn) or 
 
 ## Results:
 
-**Best Model**: Random Forest Classifier with 90% accuracy.
+- **Best Model**: Random Forest Classifier with 90% accuracy.
     
 ## Key Findings:
 - Tenure and Monthly Charges are the most influential features in predicting churn.
