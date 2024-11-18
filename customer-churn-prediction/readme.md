@@ -19,3 +19,17 @@ The goal of this project is to predict whether a customer will leave (churn) or 
 3. **Exploratory Data Analysis (EDA)**: Visualizing data distributions and correlations.
 4. **Model Building**: Logistic Regression and Random Forest to predict churn.
 5. **Model Evaluation**: Evaluating performance using accuracy, precision, recall, confusion matrix, and ROC curve.
+
+## Visualizations and Insights:
+
+- **Churn Distribution**: The imbalance between churned vs non-churned customers.
+- **Feature Importance**: Identifying which features (e.g., monthly charges, tenure) have the most influence on the churn prediction.
+- **Model Evaluation**: Visual representation of confusion matrix and ROC curve for model performance.
+
+## Results:
+
+**Best Model**: Random Forest Classifier with 90% accuracy.
+    
+## Key Findings:
+- Tenure and Monthly Charges are the most influential features in predicting churn.
+- Customers with high monthly charges are more likely to churn.
