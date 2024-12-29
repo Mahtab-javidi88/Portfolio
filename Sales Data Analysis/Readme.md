@@ -91,12 +91,7 @@ Included Power BI dashboards:
 - Identify growth opportunities in underperforming regions.
 - Optimize inventory management for high-demand products.
 - Develop targeted marketing strategies based on customer segmentation.
-
-## 📚 **Learning Resources**
-If you're new to SQL or data analysis, check out these resources:
-- [SQL for Data Analysis](https://www.coursera.org/learn/sql-for-data-analysis)
-- [Power BI Beginner Tutorials](https://learn.microsoft.com/en-us/power-bi/)
-- [Data Analysis with SQL](https://www.datacamp.com/courses/)
+- 
 
 ## 🔗 **Repository**
 [Explore the Repository](https://github.com/yourusername/sales-analysis)
