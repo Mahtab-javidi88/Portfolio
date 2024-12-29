@@ -77,11 +77,11 @@ A collection of SQL queries to analyze the sales data.
 #### **1.1 Total Sales by Region**
 ```sql
 SELECT 
-    c.Region,
-    SUM(t.Amount) AS TotalSales
+    c.[Country],
+    SUM(t.[Quantity]) AS TotalSales
 FROM Transactions t
-JOIN Customers c ON t.CustomerID = c.CustomerID
-GROUP BY c.Region
+JOIN Customers c ON t.[Customer ID] = c.[Customer ID]
+GROUP BY c.[Country]
 ORDER BY TotalSales DESC;
 ```
 
