@@ -80,11 +80,11 @@ Collection of SQL queries for analyzing sales data:
 - **1.1 Total Sales by Region**
 ```sql
 SELECT 
-    Region,
-    SUM(Sales) AS TotalSales
-FROM Sales
-JOIN Customers ON Sales.CustomerID = Customers.CustomerID
-GROUP BY Region
+    c.Region, 
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Customers c ON s.[Customer ID] = c.[Customer ID]
+GROUP BY c.Region
 ORDER BY TotalSales DESC;
 ```
 
