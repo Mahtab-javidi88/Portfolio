@@ -76,11 +76,41 @@ This project showcases the use of SQL for analyzing **Superstore Sales Dataset**
 
 ### 📂 Repository Contents
 #### 1. SQL Scripts  
-Collection of SQL queries for analyzing sales data:  
-- **1.1 Total Sales by Region**
+برای نمایش زیبا و قالب‌بندی مناسب کوئری‌ها در گیت‌هاب، می‌توانید از **Markdown** استفاده کنید. بخش‌های مختلف شامل توضیحات و کد SQL را در قالب زیر بنویسید:
+
+```markdown
+# SQL Queries for Sales Data Analysis
+
+### Total Sales of Each Product
 ```sql
 SELECT 
-    c.Region, 
+    p.[Product Name],
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Products p ON s.[Product ID] = p.[Product ID]
+GROUP BY p.[Product Name]
+ORDER BY TotalSales DESC;
+```
+
+---
+
+### Calculate Average Sales per Customer
+```sql
+SELECT 
+    c.[Customer Name],
+    AVG(s.Sales) AS AverageSales
+FROM Sales s
+JOIN Customers c ON s.[Customer ID] = c.[Customer ID]
+GROUP BY c.[Customer Name]
+ORDER BY AverageSales DESC;
+```
+
+---
+
+### Total Sales for Each Region
+```sql
+SELECT 
+    c.Region,
     SUM(s.Sales) AS TotalSales
 FROM Sales s
 JOIN Customers c ON s.[Customer ID] = c.[Customer ID]
@@ -88,53 +118,177 @@ GROUP BY c.Region
 ORDER BY TotalSales DESC;
 ```
 
-- **1.2 Monthly Revenue Trends**
+---
+
+### Top-Selling Products
 ```sql
-SELECT 
-    FORMAT(OrderDate, 'yyyy-MM') AS Month,
-    SUM(Sales) AS MonthlyRevenue
-FROM Sales
-JOIN Orders ON Sales.OrderID = Orders.OrderID
-GROUP BY FORMAT(OrderDate, 'yyyy-MM')
-ORDER BY Month;
+SELECT TOP 10
+    p.[Product Name],
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Products p ON s.[Product ID] = p.[Product ID]
+GROUP BY p.[Product Name]
+ORDER BY TotalSales DESC;
 ```
 
-- **1.3 Top-Selling Products**
+---
+
+### Top Customers by Sales
 ```sql
-SELECT 
-    ProductName,
-    SUM(Sales) AS TotalRevenue
-FROM Sales
-JOIN Products ON Sales.ProductID = Products.ProductID
-GROUP BY ProductName
-ORDER BY TotalRevenue DESC
-LIMIT 10;
+SELECT TOP 10
+    c.[Customer Name],
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Customers c ON s.[Customer ID] = c.[Customer ID]
+GROUP BY c.[Customer Name]
+ORDER BY TotalSales DESC;
 ```
 
-- **1.4 Customer Segmentation by Spending**
+---
+
+### Total Sales for Each Month
 ```sql
 SELECT 
-    CustomerName,
-    CASE 
-        WHEN SUM(Sales) >= 2000 THEN 'High Spender'
-        WHEN SUM(Sales) >= 1000 THEN 'Medium Spender'
-        ELSE 'Low Spender'
-    END AS SpendingCategory,
-    SUM(Sales) AS TotalSpent
-FROM Sales
-JOIN Customers ON Sales.CustomerID = Customers.CustomerID
-GROUP BY CustomerName
-ORDER BY TotalSpent DESC;
+    YEAR(o.[Order Date]) AS Year,
+    MONTH(o.[Order Date]) AS Month,
+    SUM(s.Sales) AS MonthlySales
+FROM Orders o
+JOIN Sales s ON o.[Order ID] = s.[Order ID]
+GROUP BY YEAR(o.[Order Date]), MONTH(o.[Order Date])
+ORDER BY Year, Month;
 ```
 
-- **1.5 Sales Performance by Category**
+---
+
+### Comparison of Sales in the Last Two Years
 ```sql
 SELECT 
-    Category,
+    YEAR([Order Date]) AS Year,
     SUM(Sales) AS TotalSales
 FROM Sales
-JOIN Products ON Sales.ProductID = Products.ProductID
-GROUP BY Category
+JOIN Orders ON Sales.[Order ID] = Orders.[Order ID]
+WHERE YEAR([Order Date]) IN (
+    SELECT DISTINCT TOP 2 YEAR([Order Date])
+    FROM Orders
+    ORDER BY YEAR([Order Date]) DESC
+)
+GROUP BY YEAR([Order Date])
+ORDER BY Year;
+```
+
+---
+
+### Identifying the Best-Selling Product Categories
+```sql
+SELECT 
+    p.Category,
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Products p ON s.[Product ID] = p.[Product ID]
+GROUP BY p.Category
+ORDER BY TotalSales DESC;
+```
+
+---
+
+### Total Sales per State
+```sql
+SELECT 
+    c.State,
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Customers c ON s.[Customer ID] = c.[Customer ID]
+GROUP BY c.State
+ORDER BY TotalSales DESC;
+```
+
+---
+
+### Calculating Order Delivery Time for Each Order
+```sql
+SELECT 
+    o.[Order ID],
+    DATEDIFF(DAY, o.[Order Date], o.[Ship Date]) AS DeliveryTime
+FROM Orders o
+WHERE o.[Ship Date] IS NOT NULL
+ORDER BY DeliveryTime DESC;
+```
+
+---
+
+### Average Delivery Time
+```sql
+SELECT 
+    AVG(DATEDIFF(DAY, [Order Date], [Ship Date])) AS AvgDeliveryTime
+FROM Orders
+WHERE [Ship Date] IS NOT NULL AND [Order Date] IS NOT NULL;
+```
+
+---
+
+### Orders with the Largest Amount
+```sql
+SELECT TOP 10
+    o.[Order ID],
+    SUM(s.Sales) AS TotalOrderSales
+FROM Orders o
+JOIN Sales s ON o.[Order ID] = s.[Order ID]
+GROUP BY o.[Order ID]
+ORDER BY TotalOrderSales DESC;
+```
+
+---
+
+### Customers Who Made the Most Purchases in Each Region
+```sql
+SELECT 
+    c.Region,
+    c.[Customer Name],
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Customers c ON s.[Customer ID] = c.[Customer ID]
+GROUP BY c.Region, c.[Customer Name]
+ORDER BY c.Region, TotalSales DESC;
+```
+
+---
+
+### Total Sales Based on Ship Mode
+```sql
+SELECT 
+    o.[Ship Mode],
+    SUM(s.Sales) AS TotalSales
+FROM Orders o
+JOIN Sales s ON o.[Order ID] = s.[Order ID]
+GROUP BY o.[Ship Mode]
+ORDER BY TotalSales DESC;
+```
+
+---
+
+### Total Sales by Product Subcategory
+```sql
+SELECT 
+    p.[Sub-Category],
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Products p ON s.[Product ID] = p.[Product ID]
+GROUP BY p.[Sub-Category]
+ORDER BY TotalSales DESC;
+```
+
+---
+
+### Total Sales Based on Product and Customer Categories
+```sql
+SELECT 
+    p.Category,
+    c.Segment,
+    SUM(s.Sales) AS TotalSales
+FROM Sales s
+JOIN Products p ON s.[Product ID] = p.[Product ID]
+JOIN Customers c ON s.[Customer ID] = c.[Customer ID]
+GROUP BY p.Category, c.Segment
 ORDER BY TotalSales DESC;
 ```
 
