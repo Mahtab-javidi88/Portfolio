@@ -76,9 +76,7 @@ This project showcases the use of SQL for analyzing **Superstore Sales Dataset**
 
 ### 📂 Repository Contents
 #### 1. SQL Scripts  
-برای نمایش زیبا و قالب‌بندی مناسب کوئری‌ها در گیت‌هاب، می‌توانید از **Markdown** استفاده کنید. بخش‌های مختلف شامل توضیحات و کد SQL را در قالب زیر بنویسید:
 
-```markdown
 # SQL Queries for Sales Data Analysis
 
 ### Total Sales of Each Product
