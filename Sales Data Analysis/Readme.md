@@ -75,9 +75,8 @@ This project showcases the use of SQL for analyzing **Superstore Sales Dataset**
 ---
 
 ### 📂 Repository Contents
-#### 1. SQL Scripts  
 
-# SQL Queries for Sales Data Analysis
+#### 1. SQL  Script Queries for Sales Data Analysis
 
 ### Total Sales of Each Product
 ```sql
