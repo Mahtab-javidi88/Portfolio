@@ -1,42 +1,56 @@
 # 🏫 Exploring NYC Public School Test Scores (EDA)
 
 ## 📜 Overview
-This project focuses on performing exploratory data analysis (EDA) on NYC public school test results. The goal is to uncover trends and identify patterns in student performance across different schools, boroughs, and demographics.
+This project focuses on exploratory data analysis (EDA) of NYC public school datasets to uncover insights about student performance and other school-related metrics. It aims to identify trends, highlight key performance indicators (KPIs), and provide actionable insights for stakeholders.
 
 ## 🛠️ **Key Skills and Tools**
-- **Python**: Pandas, Seaborn, Matplotlib for data manipulation and visualization.
-- **Exploratory Data Analysis**: Trend identification, statistical analysis, and visualization.
-- **Data Visualization**: Creating clear, impactful visualizations to communicate findings.
+- **Python**: Pandas, Seaborn, Matplotlib
+- **Data Analysis**: Exploratory Data Analysis (EDA), trend visualization, KPI extraction
+- **Data Visualization**: Distribution plots, scatter plots, heatmaps, bar charts
 
 ## 🔑 **Highlights**
-- **Insightful Analysis**: 
-  - Trends in test scores across boroughs.
-  - Performance variations by school type and demographics.
-- **Interactive Visualizations**: 
-  - Correlation heatmaps to explore relationships between variables.
-  - Distribution plots to analyze score variations.
-- **Comprehensive Metrics**: Focused on average test scores, distribution trends, and performance disparities.
+- **Distribution Analysis**: Visualized distributions of numeric variables to identify trends and outliers.
+- **Borough Comparisons**: Compared performance metrics (e.g., attendance rate, test scores) across boroughs.
+- **KPI Extraction**: 
+  - Average attendance and graduation rates.
+  - Correlation between attendance and graduation rates.
+  - Top-performing schools based on test scores.
+- **Correlation Insights**: Heatmap of relationships between numeric variables.
 
 ## 🗂️ **Data Description**
-- **Dataset**: NYC public school test scores dataset.
-  - Includes information on schools, boroughs, student demographics, and test scores.
-- **File Format**: CSV file with columns for school name, borough, test scores, and additional attributes.
+- **Dataset**: NYC public school data with columns for demographics, academic performance, and location-based information.
+- **Key Features**:
+  - Numeric variables like attendance rate, graduation rate, and test scores.
+  - Categorical variables like borough and school name.
+- **Missing Data Handling**: Visualized and analyzed null values for data quality assessment.
 
 ## 🧰 **Steps in the Analysis**
-1. **Data Loading**: Imported the dataset and examined its structure.
-2. **Data Cleaning**: Addressed missing or inconsistent data.
-3. **Exploratory Data Analysis (EDA)**:
-   - Identified trends and relationships.
-   - Visualized score distributions and correlations.
-4. **Actionable Insights**: Summarized key findings to guide potential educational interventions.
+1. **Data Loading and Cleaning**:
+   - Loaded the dataset and inspected for missing values.
+   - Visualized missing data using heatmaps.
+2. **Exploratory Data Analysis**:
+   - Plotted distributions for all numeric columns.
+   - Examined borough-wise averages for numeric variables.
+3. **KPI Analysis**:
+   - Calculated average attendance and graduation rates.
+   - Identified top-performing schools based on test scores.
+   - Explored correlations between numeric variables.
+4. **Visualization**:
+   - Used scatter plots, bar charts, and heatmaps to present findings effectively.
 
 ## 📈 **Results**
-- Schools in **Manhattan** displayed higher average test scores compared to other boroughs.
-- A strong correlation between **attendance rates** and test scores was observed.
-- Significant performance disparities were identified across different boroughs and demographics.
+- **Attendance and Graduation Rates**:
+  - Average Attendance Rate: **X%**
+  - Average Graduation Rate: **Y%**
+- **Top 10 Performing Schools**:
+  - Listed based on test scores.
+- **Correlation Insights**:
+  - Positive correlation between attendance rate and graduation rate.
+- **Key Borough Insights**:
+  - Highlighted borough-level variations in academic performance.
 
 ## 📂 **Repository Contents**
-- `notebooks/NYC_Schools_EDA.ipynb`: Contains the complete Jupyter Notebook with code and analysis.
-- `data/schools.csv`: Dataset used for the analysis.
-- `images/visualizations`: Includes saved visualizations (e.g., distribution plots, heatmaps).
-- `README.md`: Project overview and insights.
+- `NYC_Schools_EDA.ipynb`: The complete Jupyter Notebook with analysis and visualizations.
+- `data/schools.csv`: The dataset used in this analysis.
+- `plots/`: Directory containing generated visualizations.
+- `README.md`: Documentation of the project.
