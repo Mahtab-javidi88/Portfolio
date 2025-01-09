@@ -32,7 +32,6 @@ This project focuses on exploratory data analysis (EDA) of NYC public school dat
    - Plotted distributions for all numeric columns.
    - Examined borough-wise averages for numeric variables.
 3. **KPI Analysis**:
-   - Calculated average attendance and graduation rates.
    - Identified top-performing schools based on test scores.
    - Explored correlations between numeric variables.
 4. **Visualization**:
@@ -47,7 +46,7 @@ This project focuses on exploratory data analysis (EDA) of NYC public school dat
 
 
 ## 📂 **Repository Contents**
-- `NYC_Schools_EDA.ipynb`: The complete Jupyter Notebook with analysis and visualizations.
-- `data/schools.csv`: The dataset used in this analysis.
+- `EDA_NYC-School.ipynb`: The complete Jupyter Notebook with analysis and visualizations.
+- `schools.csv`: The dataset used in this analysis.
 - `plots/`: Directory containing generated visualizations.
 - `README.md`: Documentation of the project.
