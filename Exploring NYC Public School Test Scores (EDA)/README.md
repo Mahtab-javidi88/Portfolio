@@ -50,3 +50,18 @@ This project focuses on exploratory data analysis (EDA) of NYC public school dat
 - `schools.csv`: The dataset used in this analysis.
 - `plots/`: Directory containing generated visualizations.
 - `README.md`: Documentation of the project.
+
+## Visualizations
+
+### 1. Missing Data Heatmap
+![Missing Data Heatmap](plots/missing_data_heatmap.png)
+
+### 2. Distribution of Numeric Columns
+![Distribution](plots/distribution_column_name.png)
+
+### 3. Attendance Rate vs. Graduation Rate
+![Attendance vs Graduation](plots/attendance_vs_graduation.png)
+
+### 4. Correlation Matrix
+![Correlation Matrix](plots/correlation_matrix.png)
+
