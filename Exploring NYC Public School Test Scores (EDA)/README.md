@@ -37,17 +37,14 @@ This project focuses on exploratory data analysis (EDA) of NYC public school dat
    - Explored correlations between numeric variables.
 4. **Visualization**:
    - Used scatter plots, bar charts, and heatmaps to present findings effectively.
+  
+## 📈 Summary of Findings
+- Numeric distributions and trends were visualized to identify outliers and patterns.
+- Borough-level analysis highlighted variations in performance across regions.
+- A positive correlation was observed between attendance rate and graduation rate, emphasizing the importance of attendance in academic success.
+- The top 10 schools were identified based on test scores, showcasing excellent performance.
+- Key relationships between variables were explored using a correlation matrix.
 
-## 📈 **Results**
-- **Attendance and Graduation Rates**:
-  - Average Attendance Rate: **X%**
-  - Average Graduation Rate: **Y%**
-- **Top 10 Performing Schools**:
-  - Listed based on test scores.
-- **Correlation Insights**:
-  - Positive correlation between attendance rate and graduation rate.
-- **Key Borough Insights**:
-  - Highlighted borough-level variations in academic performance.
 
 ## 📂 **Repository Contents**
 - `NYC_Schools_EDA.ipynb`: The complete Jupyter Notebook with analysis and visualizations.
