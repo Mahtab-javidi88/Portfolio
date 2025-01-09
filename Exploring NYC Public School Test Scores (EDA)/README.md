@@ -57,7 +57,7 @@ This project focuses on exploratory data analysis (EDA) of NYC public school dat
 ![Missing Data Heatmap](plots/missing_data_heatmap.png)
 
 ### 2. Distribution of test Score
-![Distribution](plots/distribution_percent_tested.png.png)
+![Distribution](plots/distribution_percent_tested.png)
 
 ### 4. Correlation Matrix
 ![Correlation Matrix](plots/correlation_matrix.png)
