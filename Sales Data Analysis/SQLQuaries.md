@@ -1,5 +1,4 @@
 
-```markdown
 # Sales Analysis Report
 1. **Revenue trends over time**
 2. **Best and worst-performing products**
