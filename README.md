@@ -1,80 +1,88 @@
-# 👩‍💻 Mahtab Javidi - Data Analyst & Data Scientist  
+# Hi there, I'm Mahtab Javidi 👋
 
-Welcome to my GitHub portfolio! Here, I showcase my expertise in **Data Analysis**, **Machine Learning**, **Deep Learning**, and **Business Intelligence (BI)** through a collection of curated projects. My aim is to solve real-world problems by transforming raw data into actionable insights.
+**Data Analyst | Python & SQL Enthusiast | Power BI Developer | ML Learner**
 
-Feel free to explore my repositories and connect with me via [LinkedIn](https://www.linkedin.com/in/mahtab-javidi) or [Email](mailto:your-email@example.com).
-
----
-
-## 🔍 **What You'll Find Here**
-- **Projects**: Examples of my work in machine learning, Python, SQL, and Power BI.
-- **Certifications**: Verified credentials from Coursera, DataCamp, and others.
-- **Resume**: A summary of my professional experience and skills.
+I'm a career switcher with 11+ years of project management experience and a passion for data. I combine business insight with technical skills to extract meaningful patterns and deliver value-driven solutions using Python, SQL, Power BI, and Machine Learning techniques.
 
 ---
 
-## 🏆 **Featured Projects**
+## 🔹 About Me
 
-### **1. Customer Churn Prediction**  
-A machine learning model to predict customer churn based on historical customer data.  
-- **Key Skills**: Python, Scikit-learn, Pandas, Data Preprocessing, Model Evaluation  
-- [Explore the Repository](https://github.com/Mahtab-javidi88/Portfolio/tree/main/customer-churn-prediction)
-
-### **2. Sales Data Analysis with SQL**  
-Analyzing sales trends, KPIs, and revenue growth using advanced SQL queries.  
-- **Key Skills**: SQL, Aggregations, Filtering, Data Analysis  
-- [Explore the Repository](https://github.com/yourusername/sales-analysis)
-
-### **3. Power BI Dashboard: Sales Performance**  
-An interactive dashboard showcasing sales trends and regional performance.  
-- **Key Skills**: Power BI, DAX, Data Visualization  
-- [Explore the Repository](https://github.com/yourusername/power-bi-sales-dashboard)
-
-### **4. Investigating Netflix Movies**  
-An analysis of Netflix movies to uncover trends in genres, ratings, and release years.  
-- **Key Skills**: Python, Matplotlib, Seaborn, EDA  
-- [Explore the Repository](https://github.com/yourusername/netflix-analysis)
-
-### **5. Time Series Stock Price Prediction**  
-Predicting stock prices using ARIMA and LSTM models.  
-- **Key Skills**: Time Series Analysis, Deep Learning, TensorFlow  
-- [Explore the Repository](https://github.com/yourusername/stock-price-prediction)
+* 🎓 Certified Data Scientist and Data Analyst (DataCamp & Coursera)
+* 📊 Skilled in data wrangling, exploration, visualization, and predictive modeling
+* 🌎 Currently seeking full-time or freelance opportunities in data analysis and ML
+* 🌐 Portfolio: [GitHub](https://github.com/mahtab-javidi) | [LinkedIn](https://www.linkedin.com/in/mahtab-javidi) | [Resume](https://github.com/mahtab-javidi/mahtab-javidi-resume.pdf)
 
 ---
 
-## 📜 **Certifications**
+## 🔧 Tools & Technologies
 
-## Education and Courses:
-- **Computer Engineering BS**
-- **Artifical Enteligence MS**
-  
-- **Machine Learning and Deep Learning courses in coursera:**
--  Convolutional Neural Networks[PDF File][Coursera LUE4HHU8V76S.pdf](https://github.com/user-attachments/files/16196273/Coursera.LUE4HHU8V76S.pdf)
--  Advanced Learning Algorithms[PDF File][Coursera GSBL3DWUFZAJ.pdf](https://github.com/user-attachments/files/16196279/Coursera.GSBL3DWUFZAJ.pdf)
--  Improving Deep Neural Networks[PDF File][Coursera DGGQEGX2WS5R.pdf](https://github.com/user-attachments/files/16196278/Coursera.DGGQEGX2WS5R.pdf)
--  Neural Networks and Deep Learning[PDF File][Coursera 4CSK2WU9BN2N.pdf](https://github.com/user-attachments/files/16196277/Coursera.4CSK2WU9BN2N.pdf)
--  Supervised Machine Learning[PDF File][Coursera YQ4YKMS8S2TU.pdf](https://github.com/user-attachments/files/16196275/Coursera.YQ4YKMS8S2TU.pdf)
--  Structuring Machine Learning[PDF File][Coursera N582ST938KB6.pdf](https://github.com/user-attachments/files/16196274/Coursera.N582ST938KB6.pdf)
-
-- **DataCamp:**
-- Introduction to Python  
-- Intermediate Python  
-- Introduction to SQL  
-- Intermediate SQL  
-- Exploratory Data Analysis in Python  
-- Data Manipulation with Pandas  
-- Data Visualization in Power BI  
-- Data-Driven Decision Making in SQL  
-- Data Modeling in Power BI  
-- Case Study: Analyzing Customer Churn in Power BI  
-
-For more details, see the **Certifications Repository**: [Explore Certifications](https://github.com/yourusername/certifications)
+```yaml
+Languages:        Python, SQL
+Libraries:        Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost
+Visualization:    Power BI, matplotlib, seaborn
+Databases:        PostgreSQL, SQLite
+Tools:            Git, GitHub, Jupyter Notebook
+ML Techniques:    Regression, Classification, Cross-validation, Feature Engineering
+```
 
 ---
 
-## 📄 **Resume**
-Check out my resume for an overview of my skills, education, and professional experience:  
-[View My Resume](https://github.com/yourusername/resume)
+## 📈 Featured Projects
 
-   
-   
+### 🔹 Customer Churn Prediction
+
+* **Goal:** Predict customer churn using classification models
+* **Tools:** Python, Scikit-learn, Seaborn, Matplotlib
+* **Highlights:** Feature engineering, model evaluation, performance tuning
+* 📅 *Coming soon: link to GitHub*
+
+### 🔹 Sales Dashboard with Power BI
+
+* **Goal:** Visualize and analyze sales KPIs and trends
+* **Tools:** Power BI, DAX, Excel
+* **Highlights:** Dynamic filtering, time series comparison, regional performance
+* 📅 *Coming soon: link to GitHub*
+
+### 🔹 Marketing Campaign Analysis
+
+* **Goal:** Understand customer response to marketing efforts
+* **Tools:** Python, Pandas, Matplotlib
+* **Highlights:** Customer segmentation, behavior analysis, KPI tracking
+* 📅 *Coming soon: link to GitHub*
+
+---
+
+## 📄 Certifications
+
+| Title                        | Platform |
+| ---------------------------- | -------- |
+| Data Scientist with Python   | DataCamp |
+| Data Analyst with Python     | DataCamp |
+| Machine Learning (Andrew Ng) | Coursera |
+| Deep Learning Specialization | Coursera |
+| Power BI Fundamentals        | DataCamp |
+| SQL Fundamentals             | DataCamp |
+| Intermediate SQL             | DataCamp |
+
+**📅 Full certificate PDF:** [View all certificates](https://github.com/mahtab-javidi/certificate_ALL.pdf)
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=mahtab-javidi&show_icons=true&theme=radical" alt="Mahtab's GitHub stats" />
+  <br>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mahtab-javidi&layout=compact&theme=radical" alt="Top Languages" />
+</p>
+
+---
+
+## 📢 Let's Connect!
+
+* 📧 Email: [mahtab.javidi@email.com](mailto:mahtab.javidi@email.com) *(replace with actual)*
+* 📍 LinkedIn: [linkedin.com/in/mahtab-javidi](https://linkedin.com/in/mahtab-javidi)
+* 🌐 GitHub: [github.com/mahtab-javidi](https://github.com/mahtab-javidi)
+
+Feel free to explore my projects, connect, or reach out for collaboration. I'm always excited to work on data-driven solutions that make an impact!
