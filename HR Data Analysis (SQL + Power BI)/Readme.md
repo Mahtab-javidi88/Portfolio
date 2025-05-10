@@ -89,4 +89,5 @@ This project reflects a real-world BI use case where raw HR data is cleaned, ana
 
 ## 📸 Dashboard Preview
 
-![Dashboard](./hr_report.pdf)
+![Dashboard](./hr_report_1.png)
+![Dashboard](./hr_report_2.png)
