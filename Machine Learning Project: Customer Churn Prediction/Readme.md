@@ -6,7 +6,7 @@ Predict whether a customer will churn based on their usage and demographic data.
 To identify key factors that lead to customer churn and use machine learning models to predict churn likelihood.
 
 ## 📦 Dataset
-- Source: [Kaggle Telco Churn Dataset](https://www.kaggle.com/blastchar/telco-customer-churn)
+- Source: [Kaggle Customer Churn Dataset](https://www.kaggle.com/datasets/muhammadshahidazeem/customer-churn-dataset)
 - Records: ~7,000 customers
 - Features: Demographics, services, account information
 
