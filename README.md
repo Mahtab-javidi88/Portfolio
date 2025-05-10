@@ -81,8 +81,8 @@ ML Techniques:    Regression, Classification, Cross-validation, Feature Engineer
 
 ## 📢 Let's Connect!
 
-* 📧 Email: [mahtab.javidi@email.com](mailto:mahtab.javidi@email.com) *(replace with actual)*
+* 📧 Email: [mahtab.javidi.dev@email.com](mailto:mahtab.javidi@email.com)
 * 📍 LinkedIn: [linkedin.com/in/mahtab-javidi](https://linkedin.com/in/mahtab-javidi)
-* 🌐 GitHub: [github.com/mahtab-javidi](https://github.com/mahtab-javidi)
+* 🌐 GitHub: [github.com/mahtab-javidi](https://github.com/mahtab-javidi88)
 
 Feel free to explore my projects, connect, or reach out for collaboration. I'm always excited to work on data-driven solutions that make an impact!
