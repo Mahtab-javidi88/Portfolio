@@ -30,7 +30,7 @@ ML Techniques:    Regression, Classification, Cross-validation, Feature Engineer
 
 ---
 
-## 📈 Featured Projects
+### 📈 Featured Projects
 
  ## 🔍 1. Customer Churn Prediction (Machine Learning)
 
