@@ -1,35 +1,31 @@
-# Customer Churn Prediction
+# 📉 Customer Churn Prediction
 
-## 📜 Project Overview
+Predict whether a customer will churn based on their usage and demographic data.
 
-In this project, we predict customer churn for a telecommunications company based on historical customer data. The project includes multiple phases, such as data cleaning, feature engineering, machine learning model building, and evaluation. We utilize **Logistic Regression** and **Random Forest** models to predict churn rates and uncover significant factors contributing to customer retention.
+## 🧠 Objective
+To identify key factors that lead to customer churn and use machine learning models to predict churn likelihood.
 
-## 🔧 Key Technologies Used:
-- **Python** (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)
-- **Machine Learning**: Logistic Regression, Random Forest Classifier
-- **Data Cleaning & Feature Engineering**
-- **Data Visualization**
+## 📦 Dataset
+- Source: [Kaggle Telco Churn Dataset](https://www.kaggle.com/blastchar/telco-customer-churn)
+- Records: ~7,000 customers
+- Features: Demographics, services, account information
 
-## Objective:
-The goal of this project is to predict whether a customer will leave (churn) or stay based on several attributes like account information, demographic features, and usage data. The model will help businesses identify customers at high risk of leaving and take proactive measures to retain them.
+## 🔍 Project Steps
+1. Data Cleaning & Preprocessing
+2. Exploratory Data Analysis (EDA)
+3. Feature Engineering
+4. Model Building (Logistic Regression, Random Forest, XGBoost)
+5. Evaluation Metrics (Accuracy, F1-score, ROC-AUC)
 
-## Project Workflow:
-1. **Data Collection**: The dataset was provided in CSV format, containing customer information.
-2. **Data Preprocessing**: Cleaning and transforming the data (handling missing values, encoding categorical features).
-3. **Exploratory Data Analysis (EDA)**: Visualizing data distributions and correlations.
-4. **Model Building**: Logistic Regression and Random Forest to predict churn.
-5. **Model Evaluation**: Evaluating performance using accuracy, precision, recall, confusion matrix, and ROC curve.
+## 📊 Tools Used
+- Python (Pandas, NumPy, Matplotlib, Seaborn)
+- Scikit-learn, XGBoost
+- Jupyter Notebook
 
-## Visualizations and Insights:
+## 📈 Results
+- Best Model: Random Forest (Accuracy: 82%)
+- Key Features: Tenure, Contract Type, Monthly Charges
 
-- **Churn Distribution**: The imbalance between churned vs non-churned customers.
-- **Feature Importance**: Identifying which features (e.g., monthly charges, tenure) have the most influence on the churn prediction.
-- **Model Evaluation**: Visual representation of confusion matrix and ROC curve for model performance.
-
-## Results:
-
-- **Best Model**: Random Forest Classifier with 90% accuracy.
-    
-## Key Findings:
-- Tenure and Monthly Charges are the most influential features in predicting churn.
-- Customers with high monthly charges are more likely to churn.
+## ▶️ How to Run
+```bash
+jupyter notebook churn-prediction.ipynb
