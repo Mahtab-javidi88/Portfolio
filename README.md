@@ -30,9 +30,9 @@ ML Techniques:    Regression, Classification, Cross-validation, Feature Engineer
 
 ---
 
-### 📈 Featured Projects
+## 📈 Featured Projects
 
- ## 🔍 1. Customer Churn Prediction (Machine Learning)
+ ### 🔍 1. Customer Churn Prediction (Machine Learning)
 
 **📌 Description:**  
 Built a machine learning model to predict customer churn using historical data. The project covers preprocessing, feature engineering, and model building using Logistic Regression, Decision Tree, and Random Forest. Evaluated results using metrics like **accuracy**, **precision**, **recall**, and **ROC-AUC**.
@@ -49,7 +49,7 @@ Customer churn prediction is a high-impact use case in business analytics, showc
 
 ---
 
-## 🧾 2. Analyzing Sales Data with SQL
+### 🧾 2. Analyzing Sales Data with SQL
 
 **📌 Description:**  
 Performed data analysis on a structured sales dataset using SQL. Executed complex queries to join tables, compute business metrics, and identify trends in sales performance using aggregation and window functions.
@@ -65,7 +65,7 @@ SQL is a core skill for data analysts. This project demonstrates your ability to
 
 ---
 
-## 📊 3. Power BI Sales Dashboard
+### 📊 3. Power BI Sales Dashboard
 
 **📌 Description:**  
 Designed an interactive Power BI dashboard to visualize key sales performance metrics such as revenue, profit, and regional trends. Included slicers and filters for dynamic user interaction and business storytelling.
@@ -81,7 +81,7 @@ A strong BI dashboard shows your ability to turn raw data into clear, actionable
 
 ---
 
-## 🎬 4. Netflix Movies Dataset – Exploratory Data Analysis (EDA)
+### 🎬 4. Netflix Movies Dataset – Exploratory Data Analysis (EDA)
 
 **📌 Description:**  
 Explored and visualized a dataset of Netflix titles to uncover trends by genre, rating, and release year. Used Python libraries such as Pandas, Seaborn, and Matplotlib for data wrangling and visualization.
@@ -97,7 +97,7 @@ This project reflects your ability to analyze and present data clearly—an esse
 
 ---
 
-## 🚢 5. Titanic Dataset – Data Cleaning & Preprocessing
+### 🚢 5. Titanic Dataset – Data Cleaning & Preprocessing
 
 **📌 Description:**  
 Cleaned and preprocessed the Titanic dataset by handling missing values, encoding categorical variables, and scaling features. Prepared the dataset for machine learning model training.
@@ -113,7 +113,7 @@ Effective data preprocessing is the foundation of all successful data science pr
 
 ---
 
-## 🧠 6. Image Classification with CNN (Deep Learning)
+### 🧠 6. Image Classification with CNN (Deep Learning)
 
 **📌 Description:**  
 Implemented a Convolutional Neural Network (CNN) to classify images from datasets like CIFAR-10 or MNIST. Included data augmentation, training optimization, and performance evaluation.
