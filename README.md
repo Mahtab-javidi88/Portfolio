@@ -81,10 +81,10 @@ A strong BI dashboard shows your ability to turn raw data into clear, actionable
 
 ---
 
-### 🎬 4. Netflix Movies Dataset – Exploratory Data Analysis (EDA)
+### 🏫 4. Exploring NYC Public School Test Scores (EDA)
 
 **📌 Description:**  
-Explored and visualized a dataset of Netflix titles to uncover trends by genre, rating, and release year. Used Python libraries such as Pandas, Seaborn, and Matplotlib for data wrangling and visualization.
+Explored and visualized a dataset of of NYC public school datasets to uncover insights about student performance and other school-related metrics. It aims to identify trends, highlight key performance indicators (KPIs), and provide actionable insights for stakeholders.
 
 **🛠 Skills Covered:**  
 - Exploratory Data Analysis (EDA)  
