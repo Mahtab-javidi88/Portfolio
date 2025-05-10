@@ -65,21 +65,21 @@ SQL is a core skill for data analysts. This project demonstrates your ability to
 
 ---
 
-### 📊 3. Power BI Sales Dashboard
+### 📊 3. HR Data Analysis (SQL + Power BI)
 
-**📌 Description:**  
-Designed an interactive Power BI dashboard to visualize key sales performance metrics such as revenue, profit, and regional trends. Included slicers and filters for dynamic user interaction and business storytelling.
+📌 **Description:**  
+A complete data analysis and dashboard project combining SQL Server and Power BI to uncover critical HR insights. This project covers data cleaning, feature creation, and interactive dashboards showing gender, age, race distribution, turnover, remote workforce, and historical hiring trends.
 
-**🛠 Skills Covered:**  
-- Power BI dashboard creation  
-- Data visualization best practices  
-- DAX for calculated columns and measures  
-- Data integration and modeling  
+🛠 **Skills Covered:**
+- SQL data cleaning & transformation
+- Power BI dashboarding
+- DAX & KPI calculations
+- HR metric analysis (turnover, tenure, diversity)
+- Geospatial and time-series analysis
 
-**🚀 Why It Matters:**  
-A strong BI dashboard shows your ability to turn raw data into clear, actionable insights for stakeholders—essential for decision-making roles.
+🚀 **Why It Matters:**  
+This real-world HR analytics project demonstrates how raw organizational data can be transformed into valuable insights for workforce planning and decision-making — a key skill for data analysts and BI professionals.
 
----
 
 ### 🏫 4. Exploring NYC Public School Test Scores (EDA)
 
