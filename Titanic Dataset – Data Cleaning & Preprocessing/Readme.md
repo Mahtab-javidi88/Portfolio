@@ -78,7 +78,7 @@ The dataset is sourced from the [Titanic - Machine Learning from Disaster](https
 ## 📂 Folder Structure
 
 ```bash
-Titanic-Survival-Prediction/
+Titanic Dataset – Data Cleaning & Preprocessing/
 ├── Titanic_Notebook.ipynb
 ├── submission.csv
 ├── README.md
