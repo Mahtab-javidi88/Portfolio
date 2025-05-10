@@ -1,5 +1,4 @@
-### 📊 Superstore Sales Data Analysis with SQL
-
+### 📊 Analyzing Sales Data with SQL
 ---
 
 ### 📜 Overview
