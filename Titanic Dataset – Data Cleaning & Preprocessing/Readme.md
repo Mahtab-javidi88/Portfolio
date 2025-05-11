@@ -66,6 +66,20 @@ The dataset is sourced from the [Titanic - Machine Learning from Disaster](https
 
 ---
 
+
+## 📸 Sample Visualizations
+
+### Survival Distribution
+![Survival Distribution](images/survival_dist.png)
+
+### Age Distribution
+![Age Distribution](images/age_distribution.png)
+
+### Feature Importance
+![Feature Importance](images/feature_importance.png)
+
+---
+
 ## 📌 Future Improvements
 
 - Hyperparameter tuning using GridSearchCV or Optuna
@@ -85,3 +99,7 @@ Titanic Dataset – Data Cleaning & Preprocessing/
 ├── train.csv
 ├── test.csv
 └── gender_submission.csv
+└── Visualizations/
+    ├── age_distribution.png
+    ├── feature_importance.png
+    ├── survival_dist.png
