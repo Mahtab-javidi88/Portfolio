@@ -32,115 +32,112 @@ ML Techniques:    Regression, Classification, Cross-validation, Feature Engineer
 
 # 📈 Featured Projects
 
----
-
-🔍 **[1. Customer Churn Prediction (Machine Learning)](./Customer Churn Prediction)**  
-📌 **Description:**  
+🔍 [1. Customer Churn Prediction (Machine Learning)](./Customer_Churn_Prediction)  
+📌 Description:  
 Built a machine learning model to predict customer churn using historical data. The project covers preprocessing, feature engineering, and model building using Logistic Regression, Decision Tree, and Random Forest. Evaluated results using metrics like accuracy, precision, recall, and ROC-AUC.
 
-🛠 **Skills Covered:**  
+🛠 Skills Covered:  
 - Data cleaning & preprocessing  
 - Feature engineering  
 - Model building (Scikit-Learn)  
 - Evaluation metrics (confusion matrix, ROC curve)  
 - Cross-validation
 
-🚀 **Why It Matters:**  
+🚀 Why It Matters:  
 Customer churn prediction is a high-impact use case in business analytics, showcasing your ability to solve real-world problems using machine learning.
 
 ---
 
-🧾 **[2. Analyzing Sales Data with SQL](./Analyzing Sales Data with SQL).**  
-📌 **Description:**  
+🧾 [2. Analyzing Sales Data with SQL](./Analyzing_Sales_Data_SQL)  
+📌 Description:  
 Performed data analysis on a structured sales dataset using SQL. Executed complex queries to join tables, compute business metrics, and identify trends in sales performance using aggregation and window functions.
 
-🛠 **Skills Covered:**  
+🛠 Skills Covered:  
 - SQL queries (joins, subqueries, CTEs, window functions)  
 - Data aggregation and filtering  
 - Calculating business KPIs (e.g., revenue, profit)  
 - Time-series trend analysis
 
-🚀 **Why It Matters:**  
+🚀 Why It Matters:  
 SQL is a core skill for data analysts. This project demonstrates your ability to write efficient queries and analyze business performance with structured data.
 
 ---
 
-📊 **[3. HR Data Analysis (SQL + Power BI)](./HR Data Analysis (SQL + Power BI)).**  
-📌 **Description:**  
+📊 [3. HR Data Analysis (SQL + Power BI)](./HR_Data_Analysis_PowerBI)  
+📌 Description:  
 A complete data analysis and dashboard project combining SQL Server and Power BI to uncover critical HR insights. This project covers data cleaning, feature creation, and interactive dashboards showing gender, age, race distribution, turnover, remote workforce, and historical hiring trends.
 
-🛠 **Skills Covered:**  
+🛠 Skills Covered:  
 - SQL data cleaning & transformation  
 - Power BI dashboarding  
 - DAX & KPI calculations  
 - HR metric analysis (turnover, tenure, diversity)  
 - Geospatial and time-series analysis
 
-🚀 **Why It Matters:**  
+🚀 Why It Matters:  
 This real-world HR analytics project demonstrates how raw organizational data can be transformed into valuable insights for workforce planning and decision-making — a key skill for data analysts and BI professionals.
 
 ---
 
-🏫 **[4. Exploring NYC Public School Test Scores (EDA)](./Exploring NYC Public School Test Scores (EDA)).**  
-📌 **Description:**  
+🏫 [4. Exploring NYC Public School Test Scores (EDA)](./Exploring_NYC_Public_Schools)  
+📌 Description:  
 Explored and visualized NYC public school datasets to uncover insights about student performance and school-related metrics. It aims to identify trends, highlight key performance indicators (KPIs), and provide actionable insights for stakeholders.
 
-🛠 **Skills Covered:**  
+🛠 Skills Covered:  
 - Exploratory Data Analysis (EDA)  
 - Data wrangling with Pandas  
 - Visualization with Matplotlib and Seaborn  
 - Pattern discovery and insight extraction
 
-🚀 **Why It Matters:**  
+🚀 Why It Matters:  
 This project reflects your ability to analyze and present data clearly—an essential step in any data science pipeline.
 
 ---
 
-🚢 **[5. Titanic Dataset – Data Cleaning & Preprocessing](./Titanic Dataset – Data Cleaning & Preprocessing).**  
-📌 **Description:**  
+🚢 [5. Titanic Dataset – Data Cleaning & Preprocessing](./Titanic_Data_Cleaning)  
+📌 Description:  
 Cleaned and preprocessed the Titanic dataset by handling missing values, encoding categorical variables, and scaling features. Prepared the dataset for machine learning model training.
 
-🛠 **Skills Covered:**  
+🛠 Skills Covered:  
 - Data cleaning & imputation  
 - Feature engineering  
 - Categorical encoding  
 - Data normalization and scaling
 
-🚀 **Why It Matters:**  
+🚀 Why It Matters:  
 Effective data preprocessing is the foundation of all successful data science projects. This project demonstrates your understanding of essential data handling techniques.
 
 ---
 
-🧠 **[6. Malaria Detection Using CNN & VGG19](./Malaria Detection Using CNN).**  
-📌 **Description:**  
+🧠 [6. Malaria Detection Using CNN & VGG19](./Malaria_Detection_CNN)  
+📌 Description:  
 Developed a deep learning model using Convolutional Neural Networks (CNN) and transfer learning with VGG19 to classify malaria-infected and uninfected cell images. Includes custom CNN architecture as well as VGG19-based transfer learning. Evaluated with metrics and visualized training progress.
 
-🛠 **Skills Covered:**  
+🛠 Skills Covered:  
 - Deep learning with TensorFlow/Keras  
 - Transfer learning using VGG19  
 - Image classification and augmentation  
 - Model evaluation (accuracy, loss, confusion matrix)  
 - Image preprocessing and prediction
 
-🚀 **Why It Matters:**  
+🚀 Why It Matters:  
 This project addresses a real-world medical diagnosis challenge and showcases your ability to apply both custom deep learning and advanced pretrained models to image classification tasks.
 
 ---
 
-🔬 **[7. Vision Transformer (ViT) for Fingerprint Liveness Detection](./Vision Transformer (ViT)).**  
-📌 **Description:**  
+🔬 [7. Vision Transformer (ViT) for Fingerprint Liveness Detection](./ViT_Fingerprint_Attention)  
+📌 Description:  
 Implemented a Vision Transformer (ViT)-based model to classify fingerprint images as live or spoofed. The model highlights attention maps to interpret regions influencing the decision, enhancing explainability in biometric security systems.
 
-🛠 **Skills Covered:**  
+🛠 Skills Covered:  
 - Vision Transformer (ViT) implementation  
 - Attention map visualization  
 - Image classification (live vs. spoof)  
 - Model inference on fingerprint datasets  
 - Transfer learning with interpretability
 
-🚀 **Why It Matters:**  
-Biometric security is a growing field. This project highlights cutting-edge architecture (ViT) applied to real-world problems with interpretability — a valuable asset for AI roles involving computer vision.
-
+🚀 Why It Matters:  
+Biometric security is a growing field. This project highlights cutting-edge architecture (ViT) applied to real-worl
 
 ---
 
