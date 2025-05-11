@@ -32,7 +32,7 @@ ML Techniques:    Regression, Classification, Cross-validation, Feature Engineer
 
 📈 **Featured Projects**
 
-🔍 [1. Customer Churn Prediction (Machine Learning)](./Customer%20Churn%20Prediction)  
+🔍 [1. Customer Churn Prediction (Machine Learning)](./Machine%20Learning%20Project:%20Customer%20Churn%20Prediction)  
 📌 Description:  
 Built a machine learning model to predict customer churn using historical data. The project covers preprocessing, feature engineering, and model building using Logistic Regression, Decision Tree, and Random Forest. Evaluated results using metrics like accuracy, precision, recall, and ROC-AUC.
 
