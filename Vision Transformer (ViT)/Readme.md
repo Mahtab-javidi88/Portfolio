@@ -45,8 +45,7 @@ python fingerprint_attention_vit.py
 
 | Original Image | Attention Map |
 |----------------|----------------|
-| ![](Vision Transformer (ViT)/Dataset/Fake/clear silicone (1).bmp) | ![](outputs\clear silicone (1)_attn.jpgattention_map_last_layer.jpg) |
-
+| ![](Dataset/Fake/clear silicone (1).bmp). | ![](Outputs\clear silicone (1)_attn.jpg). |
 > 🔍 These visualizations show which parts of the image the ViT model is focusing on when making predictions.
 
 ---
