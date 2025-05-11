@@ -70,13 +70,13 @@ The dataset is sourced from the [Titanic - Machine Learning from Disaster](https
 ## 📸 Sample Visualizations
 
 ### Survival Distribution
-![Survival Distribution](images/survival_dist.png)
+![Survival Distribution](Visualizations/survival_dist.png)
 
 ### Age Distribution
-![Age Distribution](images/age_distribution.png)
+![Age Distribution](Visualizations/age_distribution.png)
 
 ### Feature Importance
-![Feature Importance](images/feature_importance.png)
+![Feature Importance](Visualizations/feature_importance.png)
 
 ---
 
