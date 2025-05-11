@@ -57,6 +57,12 @@ python fingerprint_attention_vit.py
 ```
 ViT-Fingerprint-Attention/
 ├── fingerprint_attention_vit.py
+├── vit_fingerprint_classifier.py
+├── Dataset/
+           ├──Fake
+              └── clear silicone (1).bmp...
+           ├──Live
+               └── signed live(1).bmp...   
 ├── Outputs/
 │   └── attention_map(1).png...
 ├── README.md
