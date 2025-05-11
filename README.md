@@ -50,7 +50,7 @@ Customer churn prediction is a high-impact use case in business analytics, showc
 
 ---
 
-🧾 **[2. Analyzing Sales Data with SQL](./Sales_Data_SQL_Analysis)**  
+🧾 **[2. Analyzing Sales Data with SQL](./Analyzing Sales Data with SQL)**  
 📌 **Description:**  
 Performed data analysis on a structured sales dataset using SQL. Executed complex queries to join tables, compute business metrics, and identify trends in sales performance using aggregation and window functions.
 
