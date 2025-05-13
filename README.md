@@ -13,9 +13,6 @@ I am passionate about leveraging data to uncover patterns, solve complex problem
 * 🎓 Certified Data Scientist and Data Analyst (DataCamp & Coursera)
 * 📊 Skilled in data wrangling, exploration, visualization, and predictive modeling
 * 🌎 Currently seeking full-time or freelance opportunities in data analysis and ML
-* 🌐 Portfolio: [GitHub](https://github.com/mahtab-javidi) |
-*  [LinkedIn](https://www.linkedin.com/in/mahtab-javidi)
-* | [Resume](https://github.com/mahtab-javidi/mahtab-javidi-resume.pdf)
 
 ---
 
