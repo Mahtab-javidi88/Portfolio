@@ -37,21 +37,16 @@ This project focuses on detecting malaria-infected cells from microscopy images 
 
 ## 📈 Model Performance
 
-### 🔬 Custom CNN
+### 🔬Validation Accuracy Comparison Custom CNN & VGG19 (Transfer Learning)
 
-![Custom CNN Accuracy & Loss](./Custom_CNN_performance.png)
 
----
-
-### 🔬 VGG19 (Transfer Learning)
-
-![VGG19 Accuracy & Loss](./VGG19_performance.png)
+![Custom CNN Accuracy & Loss](./Model_Accuracy_Comparison.png)
 
 ---
 
 ## 📊 Confusion Matrix (VGG19)
 
-![Confusion Matrix](./confusion_matrix_vgg19.png)
+![Confusion Matrix](./VGG19_ConfusionMatrix.png)
 
 ---
 
@@ -59,8 +54,8 @@ This project focuses on detecting malaria-infected cells from microscopy images 
 
 | Image | True Label | Prediction |
 |-------|------------|------------|
-| ![](./sample1.png) | Parasitized | Parasitized |
-| ![](./sample2.png) | Uninfected | Uninfected |
+| ![](./1.png) | Parasitized | Parasitized |
+| ![](./2.png) | Uninfected | Uninfected |
 | ... | ... | ... |
 
 ---
