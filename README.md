@@ -1,6 +1,6 @@
 # Hi there, I'm Mahtab Javidi 👋
 
-**Data Analyst | Python & SQL Enthusiast | Power BI Developer | ML Learner**
+**Data Analyst | Python & SQL Enthusiast | Power BI Developer | ML Engineer**
 
 Welcome to my data analytics and data science portfolio! Here, I showcase projects that highlight my skills in Data Analysis with SQL and Python, Machine Learning, and Business Intelligence (BI) Dashboards. My work reflects my dedication to transforming raw data into meaningful insights that support strategic decision-making. In addition, you’ll find my Resume and Certificates, which outline my professional experience and academic achievements.
 
