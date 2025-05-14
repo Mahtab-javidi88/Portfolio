@@ -169,7 +169,7 @@ Biometric security is a growing field. This project highlights cutting-edge arch
 
 ## 📢 Let's Connect!
 
-* 📧 Email: [mahtab.javidi.dev@gmail.com](mailto:mahtab.javidi@email.com)
+* 📧 Email: [mahtab.javidi.dev@gmail.com](mailto:mahtab.javidi.dev@gmail.com)
 * 📍 LinkedIn: [linkedin.com/in/mahtab-javidi](https://linkedin.com/in/mahtab-javidi)
 * 🌐 GitHub: [github.com/mahtab-javidi](https://github.com/mahtab-javidi88)
 
