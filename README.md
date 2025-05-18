@@ -10,7 +10,8 @@ I am passionate about leveraging data to uncover patterns, solve complex problem
 
 ## 🔹 About Me
 
-* 🎓 Certified Data Scientist and Data Analyst (DataCamp & Coursera)
+* 🎓 Master of Engineering (M.Eng.), Artificial Intelligence
+* 🛠 Certified Data Scientist and Data Analyst (DataCamp & Coursera)
 * 📊 Skilled in data wrangling, exploration, visualization, and predictive modeling
 * 🌎 Currently seeking full-time or freelance opportunities in data analysis and ML
 
