@@ -158,15 +158,6 @@ Biometric security is a growing field. This project highlights cutting-edge arch
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mahtab-javidi&show_icons=true&theme=radical" alt="Mahtab's GitHub stats" />
-  <br>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mahtab-javidi&layout=compact&theme=radical" alt="Top Languages" />
-</p>
-
----
 
 ## 📢 Let's Connect!
 
