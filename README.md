@@ -154,7 +154,7 @@ Biometric security is a growing field. This project highlights cutting-edge arch
 | SQL Fundamentals             | DataCamp |
 | Intermediate SQL             | DataCamp |
 
-**📅 Full certificate PDF:** [View all certificates](https://github.com/mahtab-javidi/Portfolio/certificates/certificates-.pdf)
+**📅 Full certificate PDF:** [View all certificates](./certificates/certificates-.pdf)
 
 ---
 
